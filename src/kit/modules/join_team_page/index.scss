@@ -1,0 +1,23 @@
+@import '../../../shared/styles/media.scss';
+
+.block1{
+    padding: 0 100px 54px !important;
+}
+.block2{
+    padding: 80px 100px 90px !important;
+}
+.block3{
+    padding: 90px 100px 50px !important;
+}
+
+@media (max-width: $layout-tablet) {
+    .block1{
+        padding: 0 13% 50px !important;
+    }
+    .block2{
+        padding: 9% 13% 50px !important;
+    }
+    .block3{
+        padding: 8% 13% 9% !important;
+    }
+}

@@ -1,0 +1,53 @@
+export default {
+    'en': {
+        'service': "Our Services",
+        'title6': "Mentorship",
+        "title7": "Trainings",
+        "title8": 'Events and projects',
+        "title9": "Podcasts",
+        'disc': "We have mentorship programs for girls and women focusing on professional skill-set development in IT and STEAM. Mentor and mentee set a goal, make a plan and track progress to achieve results. Ultimately, mentees are able to determine their career pathways,  and plan a personal development. Mentors share their experience and get inspired.",
+        'disc1': "TechAim team and community unites professionals who are ready to share and transfer their knowledge and skills through training, workshops in IT, STEAM, Digital, Design Thinking, Startups areas. We conduct open training and upon special request. At our training participants acquire highly demanding knowledge and skills, such as critical thinking, creativity, communication, teamwork, plus an understanding of the importance of self-development. STEAM knowledge and skills opens the door to engaging internships, high-paid positions and sustainable career and personal growth.",
+        'disc2': `We conduct  events on diverse issues to increase awareness, inspiration and exchange experience in the field of IT and STEAM! Today we hold open events where participants jointly discuss topical issues and constructively bring up possible solutions.The Round Initiative ensures the effectiveness of the Foundation's activities and progress in the development of the community, and sometimes to the start and launch of new initiatives. We also initiate and implement special projects with the involvement of various interested parties.If you have ideas, suggestions, we are always ready to discuss and find an interesting solution.Let's jointly develop STEAM and make changes in our society!`,
+        'disc3': "Podcasts cover various issues and themes of IT and STEAM in our country and globally. Our community's greatest role model stories are recorded and shared in podcasts. By listening to podcasts, listeners can be inspired and identify relevant and promising areas of self-development.",
+        'service_button':"Become a mentor",
+        'service_button1':"Become a menti",
+        'service_button2':"Сontact us",
+        'service_button3':"Our projects",
+        'service_button4':"Our podcasts",
+        
+    },
+    "ru": {
+        'service': "Наши Услуги",
+        'title6': "Менторство",
+        "title7": "Тренинги",
+        "title8": 'Мероприятия и проекты',
+        "title9": "Подкасты",
+        'disc': "Мы предоставляем возможность принять участие в менторских программах, которые фокусируются на развитии гибких и профессиональных навыков в сферах IT и STEAM у девушек и женщин. Благодаря совместно установленной цели, ментор и менти выстраивают траекторию развития быстро, качественно и успешно. В результате таких программ менти уверенно определяют для себя направление и достигают новых высот и результатов.",
+        'disc1': "Команда и сообщество TechAim состоит из экспертов и профессионалов, готовых делиться и передавать свои знания через тренинги, мастер-классы в направлениях IT, STEAM, Digital, Дизайн-мышление, Стартапы. Мы проводим как открытые тренинги, так и по специальному запросу. На наших тренингах можно приобрести актуальные  знания и навыки, такие как критическое мышление, креативность, коммуникации, работа в команде, а также понимание важности саморазвития. Наличие STEAM/ IT знаний и навыков открывают двери в будущее: перспективные стажировки, высокооплачиваемые позиции и устойчивый личностный рост.",
+        'disc2': "Мы организуем и проводим специальные мероприятия по актуальным темам и вопросам для повышения осведомленности, вдохновения и обмена опытом в сферах IT и STEAM! Ежегодно мы проводим открытые мероприятия, где участники совместно обсуждают актуальные проблемы и конструктивно выносят возможные решения. Обоюдная инициатива обеспечивает результативность мероприятий фонда и прогресс в развитии сообщества, а иногда и к началу и запуску новых инициатив. Мы также инициируем и реализуем специальные проекты с вовлечением различных заинтересованных сторон. Если у Вас есть идеи, предложения, мы всегда готовы обсудить и найти интересное решение. Давайте совместно развивать STEAM и вносить изменения в наше общество!",
+        'disc3': "Подкасты освещают различные вопросы, проблемы и аспекты сфер IT и STEAM в нашей стране и в мире. Благодаря подкастам наиболее яркие истории ролевых моделей нашего сообщества записаны и доступны. Слушая подкасты, можно вдохновиться и определить для себя актуальные и перспективные направления развития.",
+        'service_button':"Стать ментором",
+        'service_button1':"Стать менти",
+        'service_button2':"Cвязаться с нами",
+        'service_button3':"Наши проекты",
+        'service_button4':"Наши подкасты",
+
+
+    },
+    "kyr": {
+        'service': "Биздин кызматтар",
+        'title6': "Насаатчылык",
+        "title7": "Тренингтер",
+        "title8": "Иш-чаралар жана долбоорлор",
+        "title9": "Подкасттар",
+        "disc":"Биз IT жана STEAM багыттар ичинде кыздар жана аялдар үчүн кесиптик чеберчиликти өнүктүрүүгө багытталган насаатчылык программаларынын сунуштайбыз. Насаатчы жана менти биргеликте максат коюп, план түзүп жана план аркасында иштешет.  Ушундай программалардын натыйжасында менти өзүлөрүнө багытты ишенимдүү аныктап, мансаптык өсүүдө жаңы натыйжаларга кадам таштайт.",
+        "disc1":"TechAim командасы жана коому тренинг, мастер-класстар аркылуу өз билимин  IT, STEAM, Digital, Design Thinking, Startups багыттар боюнча бөлүшүүгө даяр адистерден турат. Биз ачык тренинг жана жеке сунуш боюнча өткөрөбүз. Тренинг аркылуу критикалык ой жүгүртүү, чыгармачылык, баарлашуу, командада иштөө, өзүн-өзү өнүктүрүү сыяктуу көндүмдөр берилет. STEAM/IT көндүмдөр  кызыктуу стажировка, жогорку маяналуу кызматтар жана туруктуу жеке өсүшкө эшик ачат.",
+        "disc2":"Биз IT жана STEAM чөйрөсүндө маалымдуулукту, шыктанууну жогорулатуу жана тажрыйба алмашуу үчүн актуалдуу темалар жана маселелер боюнча атайын иш-чараларды уюштурабыз жана өткөрөбүз! Жыл сайын биз 12ге жакын ачык иш-чараларды өткөрүп турабыз, анда катышуучулар биргеликте актуалдуу көйгөйлөрдү талкуулашат жана мүмкүн болгон чечимдерди конструктивдүү ойлоп табышат. Өз ара демилге фонддун ишинин натыйжалуулугун жана жамаатты өнүктүрүүдөгү, кээде жаңы демилгелердин башталышына жана көтөрүлүшүнө жетишүүнү камсыз кылат.Ошондой эле, биз ар кандай кызыкдар тараптарды камтыган атайын долбоорлорду демилгелеп, ишке ашырабыз.Эгерде сизде идеялар, сунуштар болсо, биз талкуулоого жана кызыктуу чечим табууга ар дайым даярбыз. Келгиле, STEAMды биргеликте өнүктүрүп, коомубузга өзгөрүүлөрдү киргизели!",
+        "disc3":"Подкасттар биздин өлкөдөгү жана дүйнөдөгү IT жана STEAMнын ар кандай маселелерин, көйгөйлөрүн жана аспектилерин чагылдырат. Ошондой эле биз коомчулугубуздун эң күчтүү үлгү окуяларын жаздырып, биздин аудиторияга жеткирүүнү каалайбыз. Подкасттарды угуу менен, сиз шыктанып, учурдагы жана келечектүү багыттардагы өнүгүү жолун аныктай аласыз.",
+        'service_button':"Насаатчы болуу",
+        'service_button1':"Менти болуу",
+        'service_button2':"Биз менен байланыш",
+        'service_button3':"Биздин долбоорлор",
+        'service_button4':"Биздин подкасттар",
+    }
+}

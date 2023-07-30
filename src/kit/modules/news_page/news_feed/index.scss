@@ -1,0 +1,269 @@
+@import '../../../../shared/styles/common.scss';
+@import '../../../../shared/styles/media.scss';
+
+.card_wrapper {
+  cursor: pointer;
+
+}
+
+.card {
+  width: 100%;
+  font-family: Montserrat,"Lato",sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $dark_grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr !important;
+  column-gap: 20px;
+  .crop {
+    min-height: 241px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+  
+  } 
+
+  .card_img {
+    min-height: 400px;
+    width: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+  }
+
+  .text_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    h6 {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &:hover {
+    .card_img {
+      opacity: 0.7;
+      transition: 0.3s;
+    }
+
+    .text_content {
+      h6 {
+        color: $primary;
+        transition: 0.3s;
+      }
+
+      p {
+        opacity: 0.7;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.horizontal {
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.news_feed {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 5% 0 0 !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: 1fr !important;
+  height: 616px;
+  .card_img {
+    width: 90%;
+    border-style: solid;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0 0;
+    }
+
+  }
+  .feed_right {
+    display: grid !important;
+    grid-template-rows: 1fr 1fr !important;
+    grid-template-columns: 1fr !important;
+    height: 79% !important;
+  }
+}
+
+
+.all_news_button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width:1025px) {
+  .news_feed{
+    height: 520px;
+  }
+  .card{
+    .crop{
+      min-height: 190px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    font-size: 13px;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    margin-left: 0px;
+    width: 91% !important;
+    .crop {
+      min-height: 275px;
+      width: 296px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-bottom: 20px;
+    }
+
+    .card_img {
+      width: 100%;
+    }
+
+    .text_content {
+      width: 90% !important;
+
+      h6 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+
+.card_wrapper{
+  margin-right: 0px !important;
+}
+  
+  .news_feed {
+    margin:0 !important;
+    padding: 5% 0 0 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    height: 100% !important;
+
+    .card_img {
+      width: 90%;
+      border-style: solid;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0 0;
+      }
+
+    }
+
+    .feed_right {
+      margin-top: 5%;
+      display: flex !important;
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      margin-left: 0px !important;
+    }
+
+  }
+
+
+}
+
+@media (max-width:650px) {
+  .news_feed{
+    .feed_right{
+      display: flex;
+      flex-wrap: wrap !important;
+    }
+  }
+  .card{
+    .crop{
+      width:500px !important;
+    }
+  }
+}
+@media all and (max-width: 426px) {
+
+  .card_wrapper {
+    white-space: pre-wrap !important;
+
+  }
+
+  .card {
+    padding-left: 0 !important;
+    font-size: 16px;
+    padding-top: 3%;
+    .crop{
+      width: 371px !important;
+      min-height: 218px !important;
+    }
+    .card_img {
+      min-height: 290px;
+      width: 350px;
+    }
+    .text_content{
+      width: 100% !important;
+      margin-left: 0px !important;
+    }
+
+
+  }
+
+  .news_feed {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    height: 584px;
+    .feed_right {
+      margin-top: 10%;
+      display: block !important;
+      margin-top: 20px;
+      width: 100%;
+      flex-wrap: wrap !important;
+      row-gap: 20px !important;
+    }
+    .card_img{
+      img{
+        width: 371px;
+        min-height: 217px;
+      }
+    }
+  }
+}
+
+@media (max-width: 395px) {
+  .card{
+    .crop{
+      width: 340px !important;
+    }
+  }
+  .news_feed{
+    .card_img{
+      img{
+        width: 340px;
+      }
+    }
+  }
+}

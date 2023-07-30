@@ -1,0 +1,9 @@
+// адаптивные стили через vw
+@function vw($value, $base: 1600) {
+	@return $value / $base * 100vw;
+}
+
+// vmin - для мобильных устройств
+@function vm($value, $base: 375) {
+	@return $value / $base * 100vmin;
+}

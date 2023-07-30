@@ -1,0 +1,237 @@
+@import '../../../../shared/styles/colors.scss';
+@import "../../../../shared/styles/media.scss";
+
+
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 5%;
+  .card_avatar {
+    padding-right: 96px;
+    img {
+      width: 358px;
+      height: 358px;
+      border-radius: 50%;
+    }
+  }
+  .card_info {
+
+    .card_info_header {
+      &::after {
+        display: flex;
+        height: 47px;
+        width: 102px;
+        border-bottom: 4px solid $primary;
+
+        content: ' ';
+        color: $primary;
+        bottom: 0;
+        left: 0;
+      }
+      h2 {
+        font-family: Montserrat,"Lato",sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px !important;
+        line-height: 44px;
+        color: #101010;
+        margin-bottom: 19px;
+      }
+      span {
+        font-family: Montserrat,"Lato",sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 27px;
+        color: #3b3a39;
+      }
+    }
+    .card_info_bio {
+      padding-top: 34px;
+      p {
+        font-family: Montserrat,"Lato",sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 19px;
+        line-height: 28px;
+        color: #000000;
+      }
+    }
+  }
+}
+ 
+@media (max-width: $layout-laptop){
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+
+    .card_avatar {
+      padding-right: 53px;
+      img {
+        width: 200PX !important;
+        height: 200px !important;
+        margin-bottom: 10px !important;
+      }
+    }
+    .card_info {
+  
+      .card_info_header {
+        &::after {
+          display: flex;
+          height: 27px;
+          width: 102px;
+          border-bottom: 4px solid $primary;
+  
+          content: ' ';
+          color: $primary;
+          bottom: 0;
+          left: 0;
+        }
+        h2 {
+          font-size: 21px !important;
+          margin-bottom: 0px !important;
+        }
+    
+        span {
+          font-size: 15px !important;
+        }
+    
+       
+      }
+      .card_info_bio {
+        padding-top: 37px;
+        p {
+          font-size: 15px !important;
+          line-height: 17px !important;
+        }
+      }
+    }
+  }
+}
+ 
+
+@media (max-width: 768px) {
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+
+    .card_avatar {
+      padding-right: 53px;
+      img {
+        width: 200PX !important;
+        height: 200px !important;
+        margin-bottom: 10px !important;
+      }
+    }
+    .card_info {
+  
+      .card_info_header {
+        &::after {
+          display: flex;
+          height: 27px;
+          width: 102px;
+          border-bottom: 4px solid $primary;
+  
+          content: ' ';
+          color: $primary;
+          bottom: 0;
+          left: 0;
+        }
+        h2 {
+          font-size: 21px !important;
+          margin-bottom: 0px !important;
+        }
+    
+        span {
+          font-size: 15px !important;
+        }
+    
+       
+      }
+      .card_info_bio {
+        padding-top: 37px;
+        p {
+          font-size: 15px !important;
+          line-height: 17px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px){
+  .card_avatar{
+    padding-right: 0 !important;
+  }
+  .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 0px !important;
+  }
+  .card_info {
+    width: 100%;
+    .card_info_header {
+      text-align: center;
+     &::after {
+       height: 0px !important;
+       margin-left: 33% !important ;
+      }
+      h2{
+      line-height: 25px !important;
+
+    }
+  }
+  .card_info_bio{
+    padding-top: 9px !important;
+    padding-left: 7% !important;
+    p{
+      line-height: 15px !important;
+      color: black;
+    }
+  }
+  
+ }
+}
+
+@media (max-width: 426px) {
+  .card_avatar{
+    padding-right: 0 !important;
+  }
+  .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 0px !important;
+  }
+  .card_info {
+    width: 100%;
+    .card_info_header {
+      text-align: center;
+     &::after {
+       height: 0px !important;
+       margin-left: 33% !important ;
+      }
+      h2{
+      line-height: 25px !important;
+
+    }
+  }
+  .card_info_bio{
+    padding-top: 9px !important;
+    p{
+      line-height: 15px !important;
+      color: black;
+    }
+  }
+  
+ }
+}

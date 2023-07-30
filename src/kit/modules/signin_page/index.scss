@@ -1,0 +1,57 @@
+.sign_in_page{
+  padding: 200px 100px;
+  background: url("../../../shared/images/login_page.png") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+
+  opacity: 0.9;
+  display: flex;
+
+  .sign_in_title{
+    font-size: 55px;
+    color: white;
+    width: 50%;
+    line-height: 90px;
+  }
+
+  .sign_in_form{
+    border: 2px solid lightgray;
+    width: 50%;
+    padding: 60px;
+
+    .form_title{
+      font-size: 30px;
+      color: white;
+      text-transform: uppercase;
+      padding-bottom: 40px;
+    }
+
+
+    .form_input{
+      padding: 20px;
+      border: 1px solid lightgray;
+      font-style: normal;
+      text-transform: uppercase;
+      font-size: 12px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    .button{
+      width: 250px;
+    }
+  }
+}
+
+
+@media(max-width: 1024px) {
+  .sign_in_page{
+    flex-direction: column-reverse;
+    .sign_in_title{
+      width: 100% !important;
+    }
+    .sign_in_form{
+      width: 100% !important;
+    }
+  }
+}

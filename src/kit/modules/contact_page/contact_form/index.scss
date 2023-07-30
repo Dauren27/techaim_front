@@ -1,0 +1,106 @@
+@import '../../../../shared//styles/colors.scss';
+@import '../../../../shared/styles/media.scss';
+
+.form {
+  background: #ffffff;
+  box-shadow: 5px 10px 50px rgba(59, 58, 57, 0.26);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 56px;
+
+  .form_header {
+    font-family: Montserrat,"Lato",sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #3b3a39;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+  .form_input {
+    border: 1px solid $primary;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: Montserrat,"Lato",sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #030303;
+    opacity: 0.5;
+    padding: 21px 42px;
+  }
+  .form_label {
+    font-family: Montserrat,"Lato",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #393939;
+    opacity: 0.8;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: $layout-mobile) {
+    box-shadow: none;
+    border-radius: none;
+    padding: 0px;
+    .form_input {
+      padding: 6px 11px;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 20px;
+    }
+    .form_header {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+    }
+    .form_label {
+      font-size: 13px;
+      line-height: 38px;
+    }
+  }
+}
+
+.message {
+  font-family: Montserrat,"Lato",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #393939;
+}
+
+.error_message {
+  display: block;
+  height: 32px;
+  .error_message_text {
+    font-family: Montserrat,"Lato",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: red !important;
+  }
+
+  @media (max-width: $layout-mobile) {
+    .error_message_text {
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+  .button{
+    width: 100%;
+  }
+}

@@ -1,0 +1,38 @@
+@import '../../../../shared/styles/media';
+.news_feed {
+  width: 100%;
+  padding: 0 7.5%;
+  .title {
+    font-family: Montserrat,"Lato", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+    margin-left: 41%;
+    margin-top: 4%;
+  }
+
+  .all_news_button{
+    margin-bottom: 25px !important;
+  }
+}
+@media (max-width: 888px) {
+  .news_feed{
+    padding: 0 2.5% !important;
+  }
+}
+@media (max-width: $layout-tablet) {
+    .title {
+      text-align: center;
+      margin-left: -10px !important;
+  }
+}
+@media (max-width: $layout-mobile) {
+  .news_feed{
+    margin-left: 15px !important;
+    .title {
+      font-size: 29px !important;
+      margin-top: 13% !important;
+  }
+  }
+}

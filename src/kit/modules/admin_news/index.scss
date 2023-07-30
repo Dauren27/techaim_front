@@ -1,0 +1,71 @@
+@import '../../../shared/styles/colors.scss';
+@import '../../../shared/styles/media.scss';
+
+.form {
+  background: #ffffff;
+  box-shadow: 5px 10px 50px rgba(59, 58, 57, 0.26);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 56px;
+
+  .form_header {
+    font-family: Montserrat,"Lato",sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #3b3a39;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+  .form_input {
+    border: 2px solid $primary;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    color: #0a0a0a;
+    padding: 10px 42px;
+  }
+  .input_file{
+    padding: 10px 42px;
+    background-color: orange;
+  }
+  .input_table{
+    border: 2px solid $primary !important;
+  }
+
+  
+  
+  @media (max-width: $layout-mobile) {
+    box-shadow: none;
+    border-radius: none;
+    padding: 0px;
+    .form_input {
+      padding: 6px 11px;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 20px;
+    }
+    .form_header {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+    }
+ 
+  }
+}
+table, th, td {
+  border: 1px solid black !important;
+  border-collapse: collapse !important;
+}
+
+
+
+

@@ -1,0 +1,41 @@
+{
+  "projects":
+  [
+    {
+    "id": 0,
+    "name": "Technovation Girls Challenge",
+    "description":
+      "Проект, позволяющий девочкам и девушкам решить общественные проблемы через командную разработку мобильного приложения. Под руководством менторов участницы получают STEM навыки, учатся продвигать стартап и, по выигрышу, презентуют его в Калифорнии.",
+    "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRauLLcRzE0dCqqYaAZ1uU5hl9DZ57dEFPWIw&usqp=CAU"
+    },
+    {
+    "id": 1,
+    "name": "TechWomen & TechGirls Club",
+    "description":
+      "Объединение 34 выпускниц программ TechWomen и TechGirls из Кыргызстана. При проекте инициативные аламницы обмениваются своим опытом по обмену, поддерживают и мотивируют друг друга на дальнейшее личностное развитие.",
+    "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRauLLcRzE0dCqqYaAZ1uU5hl9DZ57dEFPWIw&usqp=CAU"
+    },
+    {
+    "id": 2,
+    "name": "Khan Academy Kyrgyz",
+    "description":
+      "Объединение 34 выпускниц программ TechWomen и TechGirls из Кыргызстана. При проекте инициативные аламницы обмениваются своим опытом по обмену, поддерживают и мотивируют друг друга на дальнейшее личностное развитие.",
+    "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRauLLcRzE0dCqqYaAZ1uU5hl9DZ57dEFPWIw&usqp=CAU"
+    },
+    {
+    "id": 3,
+    "name": "Khan Academy Kyrgyz",
+    "description":
+      "Объединение 34 выпускниц программ TechWomen и TechGirls из Кыргызстана. При проекте инициативные аламницы обмениваются своим опытом по обмену, поддерживают и мотивируют друг друга на дальнейшее личностное развитие.",
+    "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRauLLcRzE0dCqqYaAZ1uU5hl9DZ57dEFPWIw&usqp=CAU"
+    }
+    ,
+    {
+    "id": 4,
+    "name": "Khan Academy Kyrgyz",
+    "description":
+      "Объединение 34 выпускниц программ TechWomen и TechGirls из Кыргызстана. При проекте инициативные аламницы обмениваются своим опытом по обмену, поддерживают и мотивируют друг друга на дальнейшее личностное развитие.",
+    "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRauLLcRzE0dCqqYaAZ1uU5hl9DZ57dEFPWIw&usqp=CAU"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+.title {
+  font: Light 42px/51px Roboto;
+  letter-spacing: 0;
+  color: #2b2a29;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 32px;
+  color: #2b2a29;
+}
+
+.block_title_16 {
+  font-size: 16px;
+}
+
+.block_title_16_bold {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.block_title_16_upper {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.block_title_17 {
+  font-size: 17px;
+}
+
+.block_title_17_bold {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.block_title_17_upper {
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.block_title_18 {
+  font-size: 18px;
+}
+
+.block_title_18_bold {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.block_title_18_upper {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.block_title_19 {
+  font-size: 19px;
+}
+
+.block_title_19_bold {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.block_title_19_upper {
+  font-size: 19px;
+  text-transform: uppercase;
+}
+
+.block_title_20 {
+  font-size: 20px;
+}
+
+.block_title_20_bold {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.block_title_20_upper {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.block_title_21 {
+  font-size: 21px;
+}
+
+.block_title_21_bold {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.block_title_21_upper {
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+.block_title_22 {
+  font-size: 22px;
+}
+
+.block_title_22_bold {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.block_title_22_upper {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.text {
+  letter-spacing: 0;
+  color: #2b2a29;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+* {
+  font-family: 'Rubik', serif;
+  font-size: 14px;
+  color: #3b3a39;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  outline: none;
+}
+
+body {
+  background: #FFFFFF;
+  min-height: 100vh;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: 'Rubik', serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  outline: none;
+}
+
+body {
+  background: #FFFFFF;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  color: #2b2a29;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+footer {
+  margin-top: auto;
+}
+/*# sourceMappingURL=common.css.map */

@@ -1,0 +1,81 @@
+@import '../../../../shared/styles/colors';
+@import '../../../../shared/styles/media';
+
+.button {
+  font-family: 'Montserrat','Lato',sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 12.66px 29.02px 13.81px 30.05px;
+  width: fit-content;
+  border: 2px solid $black;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &.yellow {
+    color: white;
+    background: $orange;
+    border: $orange;
+  }
+
+  &.black {
+    color: $black;
+    background: white;
+    border: 2px solid $black;
+  }
+
+  &.white {
+    color: $primary;
+    background: white;
+    border: 2px solid white;
+    font-weight: 600;
+  }
+  &.transparent {
+    color: white;
+    border: 2px solid white;
+    font-weight: 600;
+  }
+
+  &.yellow-transparent {
+    color: $primary;
+    border: 2px solid $primary;
+    font-weight: 600;
+  }
+
+  .loading {
+    -webkit-animation: Animation-spinner 400ms infinite linear;
+    -o-animation: Animation-spinner 400ms infinite linear;
+    animation: Animation-spinner 400ms infinite linear;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    border-right-color: white;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+
+  @keyframes Animation-spinner {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  @-webkit-keyframes Animation-spinner {
+    to {
+      -webkit-transform: rotate(1turn);
+    }
+  }
+
+  @media (max-width: $layout-tablet) {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 10px 20px;
+  }
+ 
+}

@@ -1,0 +1,14 @@
+@import "../../../shared/styles/colors";
+
+.underline {
+  &::after {
+    width: 102px;
+    height: 1px;
+    border-bottom: 3px solid $primary;
+    color: $primary;
+    display: block;
+    bottom: 0;
+    content: ' ';
+    margin: 0 auto;
+  }
+}

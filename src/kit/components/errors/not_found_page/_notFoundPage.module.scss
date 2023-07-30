@@ -1,0 +1,31 @@
+.error {
+  margin: 40px 0;
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .img {
+    max-width: 400px;
+  }
+  .title {
+    font-size: 35px;
+    font-weight: 700;
+    margin-left: 20px;
+  }
+}
+
+@media screen and( max-width: 900px) {
+  .error {
+      .row{
+        flex-direction: column;
+      }
+      .title {
+        margin-top: 20px;
+      }
+    }
+  }

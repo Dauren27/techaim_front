@@ -1,0 +1,177 @@
+@import '../../../shared/styles/colors.scss';
+@import '../../../shared/styles/media.scss';
+
+.container {
+  width: 100%;
+  padding: 20px 270px 40px 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .contacts {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 100px;
+    grid-template-rows: 1fr;
+    margin-bottom: 96px;
+    .contacts_info {
+      display: flex;
+      flex-direction: column;
+
+      .contact_title {
+        font-family: Montserrat,"Lato",sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+        color: $light-blue;
+        padding-bottom: 24px;
+        text-transform: uppercase;
+      }
+      .contact_wrapper {
+        display: flex;
+        margin-bottom: 16px;
+        align-items: center;
+        img {
+          width: 24px;
+          height: 24px;
+          margin-right: 16px;
+        }
+        p {
+          font-family: Montserrat,"Lato",sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 26px;
+          letter-spacing: 0.05em;
+          color: #393939;
+        }
+      }
+      .address {
+        padding-bottom: 40px;
+      }
+      .phone {
+        padding-bottom: 82px;
+      }
+      .online_service {
+        padding-bottom: 80px;
+      }
+      .social_media {
+        display: flex;
+        .social_link {
+          :last-of-type {
+            margin-right: 0;
+          }
+          margin-right: 46px;
+          img {
+            height: 20px;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+  .map_wrapper {
+    width: 100%;
+  }
+  @media (max-width: 1200px) {
+    padding: 20px 270px 40px 119px;
+  }
+  @media (max-width: $layout-laptop) {
+    padding: 121px 150px 167px 150px;
+    flex-direction: column;
+  }
+  @media (max-width: 999px) {
+    padding: 121px 150px 167px 60px ;
+    .contacts{
+      column-gap: 30px;
+    }
+  }
+  @media (max-width: $layout-tablet) {
+    padding: 0px 70px 100px 70px;
+    .contacts {
+      grid-template-columns: 1fr;
+      grid-auto-flow: row;
+      .contacts_info {
+        .address {
+          padding-bottom: 40px;
+        }
+        .phone {
+          padding-bottom: 40px;
+        }
+        .online_service {
+          padding-bottom: 40px;
+        }
+        .social_media {
+          padding-bottom: 80px;
+          display: flex;
+          .social_link {
+            :last-of-type {
+              margin-right: 0;
+            }
+            margin-right: 46px;
+            img {
+              height: 20px;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: $layout-mobile) {
+    padding: 0px 50px 50px 50px;
+    .contacts {
+      .contacts_info {
+        .contact_title {
+          font-size: 15px;
+          line-height: 30px;
+          padding-bottom: 12px;
+        }
+        .contact_wrapper {
+          margin-bottom: 5px;
+          img {
+            width: 15px;
+            height: 15px;
+            margin-right: 15.5px;
+          }
+          p {
+            font-family: Montserrat,"Lato",sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 26px;
+            letter-spacing: 0.05em;
+            color: #393939;
+          }
+        }
+        .address {
+          padding-bottom: 23px;
+        }
+        .phone {
+          padding-bottom: 23px;
+        }
+        .online_service {
+          padding-bottom: 23px;
+        }
+        .social_media {
+          padding-bottom: 50px;
+          display: block;
+          // display: flex;
+          .social_link {
+            :last-of-type {
+              margin-right: 0;
+            }
+            margin-right: 33px;
+            img {
+              height: 15px;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

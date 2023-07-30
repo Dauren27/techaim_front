@@ -1,0 +1,60 @@
+@import '../../../shared/styles/colors.scss';
+@import '../../../shared/styles/media.scss';
+
+.breadcrumbs {
+  width: 100%;
+  padding: 17px 78px;
+  background: $primary;
+  display: flex;
+}
+
+.breadcrumbs_item {
+  display: flex;
+  align-items: center;
+  margin-right: 27.57px;
+
+  :last-child {
+    margin-right: 0;
+  }
+
+  a {
+    font-family: Lato, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 22px;
+    color: white;
+    margin-right: 28px;
+  }
+}
+
+@media (max-width: $layout-mobile) {
+  .breadcrumbs {
+    width: 105%;
+    padding: 11px;
+    background: #f7a60c;
+    display: flex;
+    padding-left: 30px;
+  }
+
+  .breadcrumbs_item{
+    margin-right: 9.57px;
+      :last-child {
+        margin-right: 0;
+      }
+      a{
+        font-family: Lato, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 22px;
+        color: white;
+        margin-right: 8px;
+      }
+    }
+    
+  
+
+}

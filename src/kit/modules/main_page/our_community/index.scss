@@ -1,0 +1,217 @@
+@import "../../../../shared/styles/colors";
+@import "../../../../shared/styles/media.scss";
+
+.our_community {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    font-family: Montserrat,"Lato", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 30px;
+      max-width: 380px;
+
+      .icon {
+        width: 160px;
+        height: 160px;
+        border: 5px solid $orange;
+        border-radius: 50%;
+        margin-left: 70px;
+        margin-right: 70px;
+      }
+
+      h6 {
+        padding-top: 24px;
+        font-family: 'Montserrat',"Lato",sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      p {
+        padding-top: 24px;
+        font-size: 16px;
+        font-family: 'Montserrat',"Lato",sans-serif;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+     .our_community{
+       .content{
+         flex-wrap: nowrap;
+         max-width: 90%;
+         padding-top: 50px;
+         .card{
+          padding: 30px 15px !important;
+          .icon {
+            width: 130px;
+            height: 130px;
+          }
+         
+         }
+       }
+     }
+}
+@media (max-width: 888px) {
+  .our_community{
+    .content{
+      max-width: 100% !important;
+      flex-wrap: wrap !important;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .our_community {
+    .block_icon {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 31px !important;
+    }
+
+    .content {
+      padding-top: 4%;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    
+    .card{
+      padding:30px 30px !important;
+      align-items: flex-start !important;
+      padding-top: 7px !important;
+      max-width: 700px !important;
+      width: 100% !important;
+      .icon{
+        margin-left: 34px !important;
+        margin-right: 16px !important;
+        width: 130px !important;
+        height: 130px !important;
+        border: 3px solid $orange !important;
+      }
+      h6{
+        padding-top: 11px !important;
+      }
+      p{
+        text-align: justify !important;
+        padding-top: 10px !important;
+        position: absolute;
+        padding-left: 181px !important;
+      }
+    }
+  }
+  }
+}
+@media (max-width: 660px){
+  .our_community{
+    .content{
+      max-width: 88% !important;
+      .card{
+        padding: 30px 0px !important;
+        h6{
+          padding-top: 4px !important;
+        }
+        p{
+          padding-left: 155px !important;
+          height: 36%;
+        }
+        .icon{
+          margin-right: 23px !important;
+          margin-left: 5px !important;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 426px) {
+  .our_community {
+    .block_icon {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 29px !important;
+    }
+
+    .content {
+      padding-top: 0 !important;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .card{
+      align-items: flex-start !important;
+      padding-top: 7px !important;
+      max-width: 700px !important;
+      width: 598px !important;
+      .icon{
+        margin-left: 0px !important;
+        margin-right: 30px !important;
+        width: 100px !important;
+        height: 100px !important;
+        border: 3px solid $orange !important;
+      }
+      h6{
+        padding-top: 11px !important;
+      }
+      p{
+        text-align: justify !important;
+        padding-top: 78px !important;
+        position: absolute;
+        padding-left: 122px !important;
+        word-wrap: break-word;
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 415px) {
+  .our_community{
+    .content{
+      .card{
+        .icon{
+          width:100px !important;
+          height:100px !important;
+        }
+        p{
+          padding-left: 129px !important;
+          height: 30% !important;
+          text-align: left !important;
+          word-spacing: 5px !important;
+
+        }
+      }
+    }
+  }
+}

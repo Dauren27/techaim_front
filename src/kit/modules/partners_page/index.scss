@@ -1,0 +1,63 @@
+@import "../../../shared/styles/colors.scss";
+
+.one_row_slider_wrapper {
+
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 6%;
+  margin-bottom: 6%;
+  :global{
+    .slick-slider {
+      width: 100%;
+      position: relative;
+
+      .slick-arrow{
+        width: 80px;
+        height: 69px;
+        z-index: 100;
+        background-position: center;
+        background-repeat: no-repeat;
+        &:before{
+          content: '';
+        }
+      }
+
+
+      .slick-list {
+        position: relative;
+      }
+    }
+  }
+  .slider_item{
+    justify-content: center;
+    margin: 1%;
+    margin-left: 5%;
+    img{
+      border: 2px solid $primary;
+      width: 230px !important;
+
+    }
+  }
+}
+
+
+@media (max-width: 580px) {
+  .one_row_slider_wrapper{
+    margin: 0 ;
+    justify-content: center;
+    .slider_item{
+      margin-left: 0;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .one_row_slider_wrapper{
+    margin: 0 ;
+    justify-content: center;
+    .slider_item{
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@import "../../../../shared/styles/media.scss";
+
+.partners {
+  padding-left: 100px;
+  padding-right: 100px;
+  .title {
+    font-family: Montserrat,"Lato", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 72px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .partners_secondary_cards_wrapper {
+    padding-top: 45px;
+  }
+  .all_partner_button{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2.5%;
+    margin-top: 2%;
+  }
+}
+@media (max-width: 1379px) {
+  .partners{
+    padding-left: 189px;
+    padding-right: 25px;
+    .title{
+      padding-left: 26%;
+      text-align: start;
+    }
+    .all_partner_button{
+      margin-right: 15.5%;
+    }
+  }
+}
+@media (max-width:1024px) {
+  .partners{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .all_partner_button{
+    margin-right: 5.2% !important;
+  }
+}
+@media (max-width: 888px) {
+  .partners{
+    margin-left: -24px !important;
+  }
+}
+@media screen and (max-width: 768px){
+  .partners {
+    padding: 70px 45px;
+    
+    .partners_secondary_cards_wrapper{
+      padding-top: 30px;
+      margin-left: 79px;
+    }
+  }
+}
+@media screen and (max-width: 426px){
+  .partners {
+  
+    padding: 0 !important;
+    .partners_secondary_cards_wrapper{
+      padding: 50px 48px 0;
+    margin-left: 5%;
+    width: 106% !important;
+}
+    
+    .title{
+      line-height: 22px !important;
+      padding-top: 17%;
+      font-size: 33px;
+      padding-left: 19%;
+    }
+  }
+    img{
+      margin-right: 0px !important;
+    }
+    .all_partner_button{
+      margin-right: 15% !important;
+      margin-top: 6% !important;
+      justify-content: center !important;
+    }
+  }
+
+@media (max-width:415px){
+  .title{
+    padding-top: 7% !important;
+    font-size: 29px !important;
+  }
+  .partners{
+    .partners_secondary_cards_wrapper{
+      margin-left: 4% !important;
+    }
+  }
+  
+}
+
+@media (max-width: 390px) {
+  .partners_secondary_cards_wrapper{
+    width:68%;
+  }
+}

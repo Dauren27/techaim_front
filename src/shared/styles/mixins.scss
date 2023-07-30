@@ -1,0 +1,19 @@
+@mixin font($size, $weigth, $height) {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: $weigth;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin flex($justify:center) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin mobile() {
+    @media screen and (max-width: 1024px) {
+        @content
+    }
+}

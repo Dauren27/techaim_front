@@ -1,0 +1,231 @@
+@import '../../../shared/styles/colors.scss';
+@import '../../../shared/styles/media.scss';
+.section {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  padding: 50px 100px;
+  .crop {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    text-align: center;
+    margin-right: 40px;
+    img {
+      border-radius: 50%;
+      max-width: 100%;
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+
+  .mentor_info {
+    width: 100%;
+    margin-left: 8px;
+    .mentor_name {
+      h2 {
+        font-family: Montserrat,"Lato",sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 49px;
+        color: #101010;
+      }
+      h3{
+        font-family: Montserrat,"Lato",sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px ;
+        line-height: 27px;
+        min-height: 40px ;
+        color: #3b3a39;
+      }
+      span {
+        font-family: Montserrat,"Lato",sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 30px;
+        color: #3b3a39;
+      }
+    }
+    .mentor_bio {
+      padding-top: 42px;
+      padding-bottom: 42px;
+      border-bottom: 1px solid #e1e1e1;
+      h4 {
+        font-family: Montserrat,"Lato",sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        margin-bottom: 13.08px;
+      }
+      p {
+        font-family: Montserrat,"Lato",sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 27px;
+        color: #000000;
+        margin-right: 10px;
+      }
+    }
+    .mentor_tags {
+      width: 100%;
+      padding-top: 26px;
+      div {
+        margin-right: 17px;
+        margin-top: 19px;
+      }
+    }
+
+    .mentor_social_medias {
+      padding-top: 50px;
+      display: grid;
+      grid-auto-flow: column;
+      column-gap: 100px;
+      .social_media {
+        display: flex;
+        align-items: center;
+        img {
+          width: 31px;
+          height: auto;
+          margin-right: 13px;
+        }
+        span {
+          font-family: Montserrat,"Lato",sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 22px;
+          line-height: 27px;
+          color: $light-blue;
+        }
+      }
+    }
+  }
+}
+
+
+@media all and (max-width: $layout-laptop) {
+  .section {
+    flex-direction: column;
+    padding: 40px 64px;
+    .crop {
+      margin-bottom: 40px;
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    .mentor_info{
+
+      .mentor_social_medias {
+      padding-top: 35px;
+       grid-auto-flow: row;
+       row-gap: 20px;
+     }
+     .mentor_name{
+       h2{
+         font-size: 35px !important;
+       }
+     }
+     .mentor_bio{
+       padding-bottom: 27px;
+       p{
+         font-size: 20px !important;
+       }
+     }
+     .mentor_tags{
+       padding-top: 10px;
+     }
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    padding: 40px 64px;
+    .crop {
+      margin-bottom: 40px;
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    .mentor_info{
+
+      .mentor_social_medias {
+      padding-top: 35px;
+       grid-auto-flow: row;
+       row-gap: 20px;
+     }
+     .mentor_name{
+       h2{
+         font-size: 35px !important;
+       }
+     }
+     .mentor_bio{
+       padding-bottom: 27px;
+       p{
+         font-size: 20px !important;
+       }
+     }
+     .mentor_tags{
+       padding-top: 10px;
+     }
+    }
+  }
+}
+@media all and (max-width: $layout-mobile) {
+  .section {
+    flex-direction: column;
+    padding: 40px 20px;
+    .crop {
+      margin-bottom: 40px;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    .mentor_info {
+      .mentor_tags{
+        margin-right: 0px !important;
+      }
+      .mentor_social_medias {
+        grid-auto-flow: row;
+        row-gap: 20px;
+    }
+       
+        .mentor_bio{
+          padding-top: 10px !important;
+          h4{
+            font-size: 22px !important;
+          }
+          p{
+            font-size: 16px !important;
+          }
+        }
+    }
+
+    .mentor_name{
+      h2{
+        font-size: 30px !important;
+      }
+      h3{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px ;
+        line-height: 27px;
+        min-height: 40px ;
+        color: #3b3a39;
+      }
+    }
+   
+  }
+}

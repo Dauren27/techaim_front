@@ -1,0 +1,41 @@
+@import "colors.scss";
+
+.title {
+  font: Light 42px/51px Roboto;
+  letter-spacing: 0;
+  color: $black;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 32px;
+  color: $black;
+}
+
+@for $size from 16 through 22 {
+  .block_title_#{$size} {
+    font-size: $size + px;
+
+    &_bold {
+      font-size: $size + px;
+      font-weight: 600;
+    }
+
+    &_upper {
+      font-size: $size + px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+
+
+.text {
+  letter-spacing: 0;
+  color: $black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+}

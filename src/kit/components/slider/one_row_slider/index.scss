@@ -1,0 +1,144 @@
+@import "../../../../shared/styles/colors";
+@import "../../../../shared/styles/media";
+
+.one_row_slider_wrapper {
+  display: flex;
+  width: 100%;
+  :global{
+    .slick-slider {
+      width: 100%;
+      position: relative;
+
+      .slick-arrow{
+        width: 80px;
+        height: 69px;
+        z-index: 100;
+        background-position: center;
+        background-repeat: no-repeat;
+        &:before{
+          content: '';
+        }
+      }
+
+      .slick-next {
+        background-image: url('../../../../shared/icons/right_arrow.svg');
+        right: -47px;
+      }
+      .slick-prev{
+        background-image: url('../../../../shared/icons/left_arrow.svg');
+        left: -60px;
+      }
+
+      .slick-list {
+        position: relative;
+      }
+    }
+  }
+  .slider_item{
+    justify-content: center;
+    img{
+      border: 2px solid $primary;
+      width: 230px ;
+
+    }
+  }
+}
+@media (max-width: 1379px){
+  .one_row_slider_wrapper{
+    width: 86%;
+  }
+}
+@media (max-width: 1024px) {
+ 
+  .one_row_slider_wrapper{
+    z-index: 0 !important;
+    width: 100%;
+    :global{
+      .slick-slider {
+      .slick-next{
+        right: -18px !important;
+      }
+    }
+  }
+  }
+  
+}
+
+@media (max-width: 888px) {
+  .one_row_slider_wrapper{
+    width: 110% !important;
+    :global{
+      .slick-slider {
+      .slick-next{
+        right: -39px !important;
+      }
+    }
+  }
+  .slider_item{
+    img{
+      width: 169px;
+    }
+  }
+  }
+}
+
+@media (max-width: 426px) {
+  img{
+    margin-right: 0px !important;
+  }
+  .slider_item{
+    justify-content: center;
+    img{
+      border: 2px solid $primary;
+      width: 144px !important;
+
+    }
+  }
+
+  .one_row_slider_wrapper{
+    width: 88% !important;
+    z-index: 0 !important;
+
+  }
+  .slick-list {
+    position: relative;
+  }
+  .slick-next {
+    background-image: url('../../../../shared/icons/right_arrow.svg') !important;
+    right: -47px;
+  }
+  .slick-prev{
+    background-image: url('../../../../shared/icons/left_arrow.svg') !important;
+    left: -60px;
+  }
+}
+@media (max-width: 768px) {
+ 
+  .one_row_slider_wrapper{
+    z-index: 0 !important;
+    width: 92.1% !important;
+  }
+  
+}
+
+@media (max-width:400px){
+  .one_row_slider_wrapper{
+    width: 92% !important;
+    :global{
+      .slick-slider {
+      .slick-next{
+        right: -50px !important;
+      }
+    }
+  }
+  }
+}
+@media (max-width:390px){
+  .one_row_slider_wrapper{
+    width: 78%;
+  }
+  .slider_item{
+    width: 70% !important;
+  }
+
+}

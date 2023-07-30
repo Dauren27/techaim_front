@@ -1,0 +1,19 @@
+image: node:13.12.0
+
+before_script:
+  - yarn install --cache-folder .yarn
+
+stages:
+    - build
+
+build:
+    stage: build
+    cache:
+        paths:
+        - node_modules/
+        - .yarn
+    script:
+        - echo "Building deploy package"
+        - yarn install
+        - yarn build
+        - echo "Build successful"

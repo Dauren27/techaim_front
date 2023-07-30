@@ -1,0 +1,48 @@
+.mission {
+    height: 510px;
+    display:table;
+    box-sizing: border-box;
+    width: 100%;
+    background: url("../../../../shared/images/mission/mission.JPG") no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    
+    .title {
+        padding: 0 110px;
+        font-family: Montserrat,'Lato',sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 70px;
+        
+        text-align: center;
+        letter-spacing: -0.015em;
+        text-transform: uppercase;
+        
+        color: #FFFFFF;
+        display:table-cell;
+        vertical-align:middle;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .mission {
+        height: 400px;
+        .title {
+            padding: 0 22px;
+            font-size: 30px;
+            line-height: 60px;
+        }
+    }
+}
+@media screen and (max-width: 426px) {
+    .mission {
+        height: 300px !important;
+        .title {
+            padding: 0 22px;
+            font-size: 17px;
+            line-height: 30px;
+            font-weight: 700;
+        }
+    }
+}

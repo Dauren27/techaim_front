@@ -1,0 +1,22 @@
+@import '../../../shared/styles/colors.scss';
+@import '../../../shared/styles/media.scss';
+.tag {
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-family: Montserrat,"Lato",sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+  background-color: $light-blue;
+}
+@media (max-width: $layout-mobile) {
+  .tag{
+    font-size: 14px !important;
+  }
+}

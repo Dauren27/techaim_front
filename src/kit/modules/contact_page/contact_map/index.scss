@@ -1,0 +1,22 @@
+@import '../../../../shared/styles/media.scss';
+
+.container {
+  width: 100% !important;
+  height: 580px;
+  min-width: calc(100vw - 540px);
+  @media (max-width: 1200px) {
+    min-height: calc(93vw - 540px);
+  }
+  @media (max-width: $layout-laptop) {
+    height: 580px;
+    min-width: calc(100vw - 540px);
+  }
+  @media (max-width: $layout-tablet) {
+    height: 300px;
+    min-width: calc(100vw - 140px);
+  }
+  @media (max-width: $layout-mobile) {
+    height: 250px;
+    min-width: calc(100vw - 100px);
+  }
+}

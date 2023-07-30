@@ -1,0 +1,73 @@
+@import "typography.scss";
+@import "colors.scss";
+@import "grid.scss";
+@import "mixins.scss";
+@import "functions.scss";
+
+
+*  {
+  font-family: 'Rubik', serif;
+  font-size: 14px;
+  color: $dark_grey;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  outline: none;
+}
+
+body {
+  background: #FFFFFF;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+*  {
+  font-family: 'Rubik', serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+  outline: none;
+}
+
+body {
+  background: #FFFFFF;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  color: $black;
+}
+
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  margin-top: auto;
+}

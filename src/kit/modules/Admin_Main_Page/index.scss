@@ -1,0 +1,32 @@
+.div {
+  margin-left: 30%;
+  margin-top: 40px;
+
+  .h2 {
+    font-size: 40px;
+    margin-left: 1%;
+    font-weight: 600;
+    color: gray;
+  }
+
+  .linksUrl {
+    margin-top: 25px;
+    font-size: 25px;
+    line-height: 40px;
+
+  }
+
+  .a {
+    width: 32%;
+
+    &:hover {
+      background: #f7a60c;
+
+      a {
+        color: black !important;
+        text-decoration: none;
+      }
+    }
+
+  }
+}
