@@ -1,14 +1,13 @@
-import * as React from 'react';
-
-const styles = require('./index.scss');
+import * as React from "react";
+const styles=require("./index.scss");
 
 export type ButtonColor =
-  | 'yellow'
-  | 'black'
-  | 'white'
-  | 'transparent'
-  | 'yellow-transparent';
-export type ButtonState = 'normal' | 'disabled';
+  | "yellow"
+  | "black"
+  | "white"
+  | "transparent"
+  | "yellow-transparent";
+export type ButtonState = "normal" | "disabled";
 
 interface Props {
   id?: string;
@@ -27,8 +26,8 @@ const ButtonComponent = (props: Props) => {
   const {
     onClick,
     children,
-    state = 'normal',
-    color = 'yellow',
+    state = "normal",
+    color = "yellow",
     passClicks,
     customAttribute,
     loading,
@@ -38,17 +37,17 @@ const ButtonComponent = (props: Props) => {
 
   return (
     <span
-      id={customAttribute ? customAttribute : 'button'}
+      id={customAttribute ? customAttribute : "button"}
       style={style ? style : {}}
       className={[
-        'button',
+        "button",
         styles.button,
         styles[state],
         styles[color],
         className,
-      ].join(' ')}
+      ].join(" ")}
       data-attr={customAttribute}
-      onClick={state !== 'disabled' || passClicks ? onClick : () => null}
+      onClick={state !== "disabled" || passClicks ? onClick : () => null}
     >
       {children}
       {loading && <div className={styles.loading} />}
