@@ -6,8 +6,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useDispatch,useSelector } from "react-redux";
 import { path } from "../../../../api/ApiRequest";
-const slide_placeholder = require("../../../../shared/images/partners_placeholder.svg");
-const styles = require("./index.scss");
+import slide_placeholder from "../../../../shared/images/partners_placeholder.svg";
+import styles from "./index.module.scss";
 
 
 interface Props{

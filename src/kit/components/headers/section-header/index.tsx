@@ -1,5 +1,5 @@
 import React from "react";
-const styles = require("./index.scss");
+import styles from "./index.module.scss";
 
 interface Props {
   title: string;

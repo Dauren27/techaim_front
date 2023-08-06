@@ -2,7 +2,7 @@ import React from 'react'
 import { path } from '../../../api/ApiRequest';
 import OneRowSliderComponent from '../../components/slider/one_row_slider'
 
-const styles = require('./index.scss')
+import styles from './index.module.scss';
 
 interface Props{
         id: number;

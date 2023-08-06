@@ -1,10 +1,9 @@
-const logo=require("../shared/images/community_page/unisef.png")
-const logo1 = require('../shared/images/community_page/U.S.jpg');
-const logo2=require("../shared/images/community_page/Американский уголок.jpg");
-const logo3=require("../shared/images/community_page/KyrgyzPatent.jpg")
-const logo4=require("../shared/images/community_page/Women Techmakers 2.png")
-const logo5=require("../shared/images/community_page/ПВТ.jpg")
-
+import logo from "../shared/images/community_page/unisef.png";
+import logo1 from "../shared/images/community_page/U.S.jpg";
+import logo2 from "../shared/images/community_page/Американский уголок.jpg";
+import logo3 from "../shared/images/community_page/KyrgyzPatent.jpg";
+import logo4 from "../shared/images/community_page/Women Techmakers 2.png";
+import logo5 from "../shared/images/community_page/ПВТ.jpg";
 
 export const partners = [
   {

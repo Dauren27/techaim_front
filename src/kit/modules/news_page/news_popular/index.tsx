@@ -5,7 +5,7 @@ import { NewsCard } from '../../../components/news_card';
 import { useTranslation } from 'react-i18next';
 import { path } from '../../../../api/ApiRequest';
 import { LittleNewsCard } from '../../../components/news_card/little_news_card';
-const styles = require('../../../components/news_card/little_news_card/index.scss');
+import styles from '../../../components/news_card/little_news_card/index.module.scss';
 
 
 interface IProps {

@@ -10,7 +10,7 @@ import { fetchNewsRequest } from '../../../../store/actions/newsActions';
 import { INews } from '../../../../store/models/INews';
 import { LittleNewsCard } from '../../../components/news_card/little_news_card';
 import NewsFeed from '../../news_page/news_feed';
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 
 export default function MainPageNewsFeed() {
   const { t } = useTranslation();

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../../components/buttons/button';
 
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 interface Props {
   order?: 'first';
   orientation: 'right' | 'left';

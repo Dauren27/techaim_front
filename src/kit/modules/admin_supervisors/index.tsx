@@ -3,7 +3,7 @@ import { createSupervisor, deleteSupervisor, getSupervisors } from "../../../api
 import { IGetSupervisor } from "./TCreateSupervisor";
 import {Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@material-ui/core";
 import { useHistory,Link } from 'react-router-dom';
-const styles = require('../admin_news/index.scss');
+import styles from '../admin_news/index.module.scss';
 
 export default function AdminSupervisor() {
   const history = useHistory()

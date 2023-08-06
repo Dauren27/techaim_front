@@ -4,7 +4,7 @@ import { IGetMentor, IMentorSkillIds } from "./TCreateMentors";
 import {Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@material-ui/core";
 import { useHistory } from 'react-router-dom';
 
-const styles = require('../admin_news/index.scss');
+import styles from '../admin_news/index.module.scss';
 
 export default function AdminMentors() {
     const history = useHistory()

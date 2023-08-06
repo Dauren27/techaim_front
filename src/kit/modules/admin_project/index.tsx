@@ -5,7 +5,7 @@ import {Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import moment from "moment";
 import { useHistory,Link } from 'react-router-dom';
 
-const styles = require('../admin_news/index.scss');
+import styles from '../admin_news/index.module.scss';
 
 export default function AdminOurTeam() {
     const history= useHistory()

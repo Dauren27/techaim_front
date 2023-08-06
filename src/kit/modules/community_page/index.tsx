@@ -12,9 +12,7 @@ import { fetchFormsRequest } from '../../../store/actions/formAction';
 import { path } from '../../../api/ApiRequest';
 import OneRowSliderComponent from '../../components/slider/one_row_slider';
 import { Link } from 'react-router-dom';
-
-
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 
 // TODO: add photos
 const ambassadors = mentors.filter((m, i) => i < 6);

@@ -4,7 +4,7 @@ import {editTeamMember, getTeamMemberById} from "../../../../api/axiosApiRequest
 import {TGetTeamById} from "./TEditTeam";
 import {useHistory, useParams} from "react-router-dom";
 
-const styles = require('../../admin_news/index.scss');
+import styles from '../../admin_news/index.module.scss';
 
 interface EditTeamPageParams {
     id: string;

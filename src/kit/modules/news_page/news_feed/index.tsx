@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 
 interface IProps {
   news: Array<INews>;

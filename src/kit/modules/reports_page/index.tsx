@@ -5,7 +5,7 @@ import ReportsTable from './reports_table'
 import TableSearch from './reports_table/table_search';
 import { getReport } from '../../../api/axiosApiRequest';
 import { TGetReport } from '../admin_ reports/TCreateReports';
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 
 export default function ReportsPage() {
   const [reports, setData] = useState<TGetReport>();

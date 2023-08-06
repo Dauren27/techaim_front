@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { INews } from '../../../../store/models/INews';
 import { path } from '../../../../api/ApiRequest';
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 
 interface IProps {
   data: INews;

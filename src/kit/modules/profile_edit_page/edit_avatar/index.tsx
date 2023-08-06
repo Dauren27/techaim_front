@@ -1,7 +1,7 @@
 import React from 'react';
 
-const styles = require('./index.scss');
-const avatarPlaceholder = require('../../../../shared/icons/person.svg');
+import styles from './index.module.scss';
+import avatarPlaceholder from '../../../../shared/icons/person.svg';
 
 interface Props {
   avatar?: string;

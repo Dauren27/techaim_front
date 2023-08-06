@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-const styles = require("./index.scss");
-const breadcrumbIcon = require("../../../shared/icons/icon-breadcrumb.svg");
+import styles from "./index.module.scss";
+import breadcrumbIcon from "../../../shared/icons/icon-breadcrumb.svg";
 
 interface Props {
   page_title: string;

@@ -4,7 +4,7 @@ import {editProject, getProjectById} from "../../../../api/axiosApiRequest";
 import {TGetProjectById} from "./TEditProject";
 import {useHistory, useParams} from "react-router-dom";
 import moment from 'moment'
-const styles = require('../../admin_news/index.scss');
+import styles from '../../admin_news/index.module.scss';
 
 interface EditProjectParams {
     id: string;

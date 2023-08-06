@@ -3,7 +3,7 @@ import { createPartner, deletePartner, getPartner } from "../../../api/axiosApiR
 import { TGetPartners } from "./TCreatePartner";
 import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@material-ui/core";
 import {Link, useHistory } from 'react-router-dom';
-const styles = require('../admin_news/index.scss');
+import styles from '../admin_news/index.module.scss';
 
 export default function AdminPartners() {
     const history = useHistory();

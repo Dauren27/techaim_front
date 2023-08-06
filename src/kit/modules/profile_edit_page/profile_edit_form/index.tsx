@@ -1,7 +1,7 @@
 import React from 'react';
 import * as yup from 'yup';
 import { Formik, Form, Field } from 'formik';
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 interface MyFormValues {
   fullName: string;
   position: string;

@@ -8,9 +8,9 @@ import { ReactComponent as MenuIcon } from "../../../../shared/icons/menu.svg";
 import AuthContext from "../../../../context/authContext";
 import { sendLogout } from "../../../../api/axiosApiRequest";
 
-const logo = require("../../../../shared/icons/logo.png");
+import logo from "../../../../shared/icons/logo.png";
 
-const styles = require("./index.scss");
+import styles from "./index.module.scss";
 
 const submenuItems = [
   { to: "/team", label: translation.en["Our team"] },
@@ -66,6 +66,7 @@ const Header = () => {
   const history = useHistory();
   const redirect = () => {
     history.push("/login");
+    closeMobileMenu();
   };
 
   return (
@@ -92,7 +93,11 @@ const Header = () => {
         >
           {menuItems.map(({ to, label, about }) => {
             return about ? (
-              <li key={label} className={`${styles.option} ${styles.about}`}>
+              <li
+                key={label}
+                className={`${styles.option} ${styles.about}`}
+                onClick={closeMobileMenu}
+              >
                 <Link
                   to={to}
                   className={`${

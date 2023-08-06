@@ -6,7 +6,7 @@ import instagram from '../../../../shared/icons/Instagram.svg';
 import fb from '../../../../shared/icons/FB.svg';
 import linkedin from '../../../../shared/icons/linkedin.svg';
 
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 
 export default function MainPageIntro() {
   const { t } = useTranslation();

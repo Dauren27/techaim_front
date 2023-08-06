@@ -4,7 +4,7 @@ import {editSupervisor, getSupervisorById} from "../../../../api/axiosApiRequest
 import {TGetSupervisorById} from "./TEditSupervisor";
 import {useHistory, useParams} from "react-router-dom";
 
-const styles = require('../../admin_news/index.scss');
+import styles from '../../admin_news/index.module.scss';
 
 interface EditSupervisorParams {
     id: string;

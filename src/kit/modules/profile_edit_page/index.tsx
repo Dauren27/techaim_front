@@ -4,7 +4,7 @@ import Breadcrumbs from '../../components/breadcrumbs';
 import ProfileEditForm from './profile_edit_form';
 import EditAvatar from './edit_avatar';
 
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 
 export default function ProfileEditPage() {
   const [profileAvatar, setProfileAvatar] = useState('');

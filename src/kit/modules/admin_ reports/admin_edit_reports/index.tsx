@@ -4,7 +4,7 @@ import {editReport, getReportById} from "../../../../api/axiosApiRequest";
 import {TGetReportById} from "../admin_edit_reports/TEditReports";
 import {useHistory, useParams} from "react-router-dom";
 
-const styles = require('../../admin_news/index.scss');
+import styles from '../../admin_news/index.module.scss';
 
 interface EditReportParams {
     id: string;

@@ -4,7 +4,7 @@ import {Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import { TGetReport } from "./TCreateReports";
 import { useHistory,Link } from 'react-router-dom';
 
-const styles = require('../admin_news/index.scss');
+import styles from '../admin_news/index.module.scss';
 
 export default function AdminReport() {
     const history = useHistory()

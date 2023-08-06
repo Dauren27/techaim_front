@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 
 export default function AdminMentors() {
     const submenuItems = [

@@ -1,102 +1,103 @@
-import * as React from 'react';
-import { Link } from 'react-router-dom';
-import SectionHeader from '../../components/headers/section-header';
-import Breadcrumbs from '../../components/breadcrumbs';
-import ContactForm from './contact_form';
-import ContactMap from './contact_map';
-import { useTranslation } from 'react-i18next';
-const phone_icon = require('../../../shared/icons/icon-phone-grey.svg');
-const globe_icon = require('../../../shared/icons/icon-globe-grey.svg');
-const mail_icon = require('../../../shared/icons/icon-mail-grey.svg');
-const fb_icon = require('../../../shared/icons/icon-fb-grey.svg');
-const twitter_icon = require('../../../shared/icons/icon-twitter-grey.svg');
-const instagram_icon = require('../../../shared/icons/icon-instagram-grey.svg');
-const linkedin_icon = require('../../../shared/icons/icon-linkedin-grey.svg');
-const tiktok_icon = require('../../../shared/icons/TikTok_Icon_Black.png')
-const styles = require('./index.scss');
+import * as React from "react";
+import { Link } from "react-router-dom";
+import SectionHeader from "../../components/headers/section-header";
+import Breadcrumbs from "../../components/breadcrumbs";
+import ContactForm from "./contact_form";
+import ContactMap from "./contact_map";
+import { useTranslation } from "react-i18next";
+import phone_icon from "../../../shared/icons/icon-phone-grey.svg";
+import globe_icon from "../../../shared/icons/icon-globe-grey.svg";
+import mail_icon from "../../../shared/icons/icon-mail-grey.svg";
+import fb_icon from "../../../shared/icons/icon-fb-grey.svg";
+import twitter_icon from "../../../shared/icons/icon-twitter-grey.svg";
+import instagram_icon from "../../../shared/icons/icon-instagram-grey.svg";
+import linkedin_icon from "../../../shared/icons/icon-linkedin-grey.svg";
+import tiktok_icon from "../../../shared/icons/TikTok_Icon_Black.png";
+import styles from "./index.module.scss";
 
-export default function ContactPage (){
- const {t}=useTranslation()
-    return (
-      <>
-        <section>
-          <Breadcrumbs page_url='/contact' page_title={t("contact_title")} />
-        </section>
-        <SectionHeader title={t("contact_title")} underline />
-        <div className={[styles.container].join(' ')}>
-          <div className={[styles.contacts].join(' ')}>
-            <div className={[styles.contacts_info].join(' ')}>
-              <div className={[styles.address].join(' ')}>
-                <h2 className={[styles.contact_title].join(' ')}>{t("contact_adress")}</h2>
-                <div className={[styles.contact_wrapper].join(' ')}>
-                  <p>{t("contact_adress_name")}</p>
-                </div>
-              </div>
-              <div className={[styles.phone].join(' ')}>
-                <h2 className={[styles.contact_title].join(' ')}>{t("tel")}</h2>
-                <div className={[styles.contact_wrapper].join(' ')}>
-                  <img src={phone_icon} alt='phone_icon' />
-                  <p>+996 701 19 11 91</p>
-                </div>
-              </div>
-              <div className={[styles.online_service].join(' ')}>
-                <h2 className={[styles.contact_title].join(' ')}>
-                  {t("online_service")}
-                </h2>
-                <div className={[styles.contact_wrapper].join(' ')}>
-                  <img src={globe_icon} alt='globe_icon' />
-                  <p>www.techaim.org</p>
-                </div>
-                <div className={[styles.contact_wrapper].join(' ')}>
-                  <img src={mail_icon} alt='mail_icon' />
-                  <p>techaim@techaim.org</p >
-                </div>
-              </div>
-              <h2 className={[styles.contact_title].join(' ')}>
-                {t("offical_social_link")}
-                </h2>
-              <div className={[styles.social_media].join(' ')}>
-                <a
-                  href='https://www.instagram.com/techaim.kg'
-                  className={[styles.social_link].join(' ')}
-                >
-                  <img src={instagram_icon} alt='icon-instagram' />
-                </a>
-                <a
-                  href='https://www.facebook.com/techaim.kg'
-                  className={[styles.social_link].join(' ')}
-                >
-                  <img src={fb_icon} alt='icon-fb' />
-                </a>
-                <a
-                  href='https://kg.linkedin.com/company/techaim'
-                  className={[styles.social_link].join(' ')}
-                >
-                  <img src={linkedin_icon} alt='icon-linkedin' />
-                </a>
-                <a
-                  href='https://twitter.com/techaimkg'
-                  className={[styles.social_link].join(' ')}
-                >
-                  <img src={twitter_icon} alt='icon-twitter' />
-                </a>
-                <a
-                  href='https://vt.tiktok.com/ZSRYpRCNY/'
-                  className={[styles.social_link].join(' ')}
-                >
-                  <img src={tiktok_icon} alt='icon-tiktok' />
-                </a>
+export default function ContactPage() {
+  const { t } = useTranslation();
+  return (
+    <>
+      <section>
+        <Breadcrumbs page_url="/contact" page_title={t("contact_title")} />
+      </section>
+      <SectionHeader title={t("contact_title")} underline />
+      <div className={[styles.container].join(" ")}>
+        <div className={[styles.contacts].join(" ")}>
+          <div className={[styles.contacts_info].join(" ")}>
+            <div className={[styles.address].join(" ")}>
+              <h2 className={[styles.contact_title].join(" ")}>
+                {t("contact_adress")}
+              </h2>
+              <div className={[styles.contact_wrapper].join(" ")}>
+                <p>{t("contact_adress_name")}</p>
               </div>
             </div>
-            <div className={[styles.form_wrapper].join('')}>
-              <ContactForm />
+            <div className={[styles.phone].join(" ")}>
+              <h2 className={[styles.contact_title].join(" ")}>{t("tel")}</h2>
+              <div className={[styles.contact_wrapper].join(" ")}>
+                <img src={phone_icon} alt="phone_icon" />
+                <p>+996 701 19 11 91</p>
+              </div>
+            </div>
+            <div className={[styles.online_service].join(" ")}>
+              <h2 className={[styles.contact_title].join(" ")}>
+                {t("online_service")}
+              </h2>
+              <div className={[styles.contact_wrapper].join(" ")}>
+                <img src={globe_icon} alt="globe_icon" />
+                <p>www.techaim.org</p>
+              </div>
+              <div className={[styles.contact_wrapper].join(" ")}>
+                <img src={mail_icon} alt="mail_icon" />
+                <p>techaim@techaim.org</p>
+              </div>
+            </div>
+            <h2 className={[styles.contact_title].join(" ")}>
+              {t("offical_social_link")}
+            </h2>
+            <div className={[styles.social_media].join(" ")}>
+              <a
+                href="https://www.instagram.com/techaim.kg"
+                className={[styles.social_link].join(" ")}
+              >
+                <img src={instagram_icon} alt="icon-instagram" />
+              </a>
+              <a
+                href="https://www.facebook.com/techaim.kg"
+                className={[styles.social_link].join(" ")}
+              >
+                <img src={fb_icon} alt="icon-fb" />
+              </a>
+              <a
+                href="https://kg.linkedin.com/company/techaim"
+                className={[styles.social_link].join(" ")}
+              >
+                <img src={linkedin_icon} alt="icon-linkedin" />
+              </a>
+              <a
+                href="https://twitter.com/techaimkg"
+                className={[styles.social_link].join(" ")}
+              >
+                <img src={twitter_icon} alt="icon-twitter" />
+              </a>
+              <a
+                href="https://vt.tiktok.com/ZSRYpRCNY/"
+                className={[styles.social_link].join(" ")}
+              >
+                <img src={tiktok_icon} alt="icon-tiktok" />
+              </a>
             </div>
           </div>
-          <div>
-            <ContactMap />
+          <div className={[styles.form_wrapper].join("")}>
+            <ContactForm />
           </div>
         </div>
-      </>
-    );
-  
+        <div>
+          <ContactMap />
+        </div>
+      </div>
+    </>
+  );
 }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import ButtonComponent from '../../components/buttons/button'
 
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 
 export default class SignInPage extends React.Component<any, any> {
     render() {

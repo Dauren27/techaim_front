@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
-const styles = require('./index.scss');
-const first_block_icon = require('../../../../shared/icons/lapm.png');
-const second_block_icon = require('../../../../shared/icons/tec.png');
-const third_block_icon = require('../../../../shared/icons/tag.png');
+import styles from './index.module.scss';
+import first_block_icon from '../../../../shared/icons/lapm.png';
+import second_block_icon from '../../../../shared/icons/tec.png';
+import third_block_icon from '../../../../shared/icons/tag.png';
 
 export default function MainPageOurCommunity() {
   const { t } = useTranslation();

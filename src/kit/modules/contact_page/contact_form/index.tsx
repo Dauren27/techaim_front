@@ -2,7 +2,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import * as React from 'react';
 import Button from '../../../components/buttons/button';
 import { useTranslation } from 'react-i18next';
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm('contactForm');

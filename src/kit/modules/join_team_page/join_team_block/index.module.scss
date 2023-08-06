@@ -4,9 +4,16 @@
 .join_team_block {
   display: flex;
   justify-content: space-between;
-  font-family: Montserrat,"Lato",sans-serif;
+  font-family: Montserrat, "Lato", sans-serif;
   font-size: 16px;
-
+  .text {
+    letter-spacing: 0;
+    color: $black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+  }
   &.right {
     flex-direction: row-reverse;
   }
@@ -22,14 +29,14 @@
     width: 50%;
     .title {
       padding-bottom: 50px;
-      font-family: Lato,"Montserrat",sans-serif;
+      font-family: Lato, "Montserrat", sans-serif;
       font-weight: 600;
       font-size: 41px;
     }
 
     .text {
       padding-bottom: 20px;
-      font-family: 'Montserrat',"Lato" ,sans-serif;
+      font-family: "Montserrat", "Lato", sans-serif;
       font-weight: 300;
       font-size: 20px;
       line-height: 25px;
@@ -40,7 +47,7 @@
       padding-top: 40px;
       white-space: nowrap;
 
-      a{
+      a {
         color: inherit;
       }
     }
@@ -74,14 +81,15 @@
         padding-top: 45px;
         padding-bottom: 45px;
 
-        font-family: 'Montserrat',"Lato",sans-serif;
+        font-family: "Montserrat", "Lato", sans-serif;
         font-weight: 400;
         font-size: 18px;
         line-height: 21px;
         font-style: italic;
-        &:before{
-          display:inline-block;
-          background: url("../../../../shared/icons/opening_quotes.svg") no-repeat;
+        &:before {
+          display: inline-block;
+          background: url("../../../../shared/icons/opening_quotes.svg")
+            no-repeat;
           content: "";
           background-size: 20px;
           width: 20px;
@@ -90,9 +98,10 @@
           top: 0;
           left: 0;
         }
-        &:after{
-          display:inline-block;
-          background: url("../../../../shared/icons/closing_quotes.svg") no-repeat;
+        &:after {
+          display: inline-block;
+          background: url("../../../../shared/icons/closing_quotes.svg")
+            no-repeat;
           content: "";
           background-size: 20px;
           width: 20px;
@@ -104,14 +113,14 @@
       }
     }
 
-    .name_block{
+    .name_block {
       margin-top: 20px;
       border-top: 2px solid $main_yellow;
       padding-top: 10px;
       font-size: 28px;
       font-weight: 600;
 
-      .member_job_position{
+      .member_job_position {
         font-size: 22px;
         padding-top: 10px;
         font-weight: 400;
@@ -122,12 +131,12 @@
 @media (max-width: $layout-laptop) {
   .join_team_block {
     flex-direction: column;
-   
-    .media_block{
-      width: 100%;
-      padding-top:40px;
 
-      .name_block{
+    .media_block {
+      width: 100%;
+      padding-top: 40px;
+
+      .name_block {
         font-size: 19px;
         line-height: 18px;
         margin-top: 5px;
@@ -137,13 +146,13 @@
         }
       }
 
-      .avatar_block .bio{
-    font-size: 16px !important;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    line-height: 26px;
+      .avatar_block .bio {
+        font-size: 16px !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        line-height: 26px;
 
-        &:after{
+        &:after {
           right: 0px;
         }
       }
@@ -155,44 +164,42 @@
 
       .avatar_block {
         margin-bottom: 0px;
-        margin-left: 33px ;
+        margin-left: 33px;
       }
     }
     .text_block {
       width: 100%;
 
-      .title{
+      .title {
         padding-bottom: 12px;
         font-size: 28px !important;
         padding-top: 17px !important;
       }
-      .text{
-       font-size: 18px !important;
-       line-height: 28px !important;
-       padding-top: 5px !important;  
+      .text {
+        font-size: 18px !important;
+        line-height: 28px !important;
+        padding-top: 5px !important;
       }
 
       .button {
         padding-top: 20px;
       }
-
     }
 
     &.right {
       flex-direction: column;
     }
-
   }
 }
 @media all and (max-width: $layout-tablet) {
   .join_team_block {
     flex-direction: column;
-   
-    .media_block{
-      width: 100%;
-      padding-top:40px;
 
-      .name_block{
+    .media_block {
+      width: 100%;
+      padding-top: 40px;
+
+      .name_block {
         font-size: 19px;
         line-height: 18px;
         margin-top: 5px;
@@ -202,13 +209,13 @@
         }
       }
 
-      .avatar_block .bio{
-    font-size: 16px !important;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    line-height: 26px;
+      .avatar_block .bio {
+        font-size: 16px !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        line-height: 26px;
 
-        &:after{
+        &:after {
           right: 0px;
         }
       }
@@ -220,53 +227,49 @@
 
       .avatar_block {
         margin-bottom: 0px;
-        margin-left: 33px ;
+        margin-left: 33px;
       }
     }
     .text_block {
       width: 100%;
 
-      .title{
+      .title {
         padding-bottom: 12px;
         font-size: 28px !important;
         padding-top: 17px !important;
       }
-      .text{
-       font-size: 18px !important;
-       line-height: 28px !important;
-       padding-top: 5px !important;  
+      .text {
+        font-size: 18px !important;
+        line-height: 28px !important;
+        padding-top: 5px !important;
       }
 
       .button {
         padding-top: 20px;
       }
-
     }
 
     &.right {
       flex-direction: column;
     }
-
   }
 }
 
-
 @media (max-width: $layout-mobile) {
-     .media_block{
-       flex-direction: column !important;
-       .avatar_block{
-         margin-left: 25px !important;
-       }
-       .avatar_wrapper{
-         margin-left: 20% !important;
-         margin-top: 0px !important
-       }
-     }
-     .text_block{
-       .text{
-         font-size: 16px !important;
-         text-align: left;
-       }
-     }
+  .media_block {
+    flex-direction: column !important;
+    .avatar_block {
+      margin-left: 25px !important;
+    }
+    .avatar_wrapper {
+      margin-left: 20% !important;
+      margin-top: 0px !important;
+    }
+  }
+  .text_block {
+    .text {
+      font-size: 16px !important;
+      text-align: left;
+    }
+  }
 }
-

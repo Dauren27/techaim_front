@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { INews } from '../../../store/models/INews';
-import { path } from '../../../api/ApiRequest';
-const styles = require('./index.scss');
+import React from "react";
+import { Link } from "react-router-dom";
+import { INews } from "../../../store/models/INews";
+import { path } from "../../../api/ApiRequest";
+import styles from "./index.module.scss";
 
 interface IProps {
   data: INews;
@@ -17,8 +17,8 @@ export function NewsCard(props: IProps) {
       <div
         className={[
           styles.card,
-          props.horizontal ? styles.horizontal : '',
-        ].join(' ')}
+          props.horizontal ? styles.horizontal : "",
+        ].join(" ")}
       >
         <div className={styles.text_content}>
           <h6 className={styles.title}>{news.title}</h6>
@@ -27,7 +27,7 @@ export function NewsCard(props: IProps) {
             <p>
               <span className={styles.block__time}>
                 {news.teamMemberNameDto.firstName}
-                <br />8 May, 7:21 pm{' '}
+                <br />8 May, 7:21 pm{" "}
               </span>
               //TODO: add date render from backend, add views field on backend
             </p>

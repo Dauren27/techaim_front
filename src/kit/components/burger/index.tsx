@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-const styles = require("./index.scss");
-const common = require("../../../shared/styles/common.scss");
-const logo = require("../../../shared/icons/logo.png");
+import styles from "./index.module.scss";
+import common from "../../../shared/styles/common.module.scss";
+import logo from "../../../shared/icons/logo.png";
 
 const BurgerComponent = () => {
   const [isOpen, setOpenStatus] = React.useState(false);

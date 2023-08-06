@@ -4,7 +4,7 @@ import {editMentor, getMentorById} from "../../../../api/axiosApiRequest";
 import {TGetMentorById,IMentorSkillIds} from "./TEditMentor";
 import {useHistory, useParams} from "react-router-dom";
 
-const styles = require('../../admin_news/index.scss');
+import styles from '../../admin_news/index.module.scss';
 
 interface EditMentorParams {
     id: string;

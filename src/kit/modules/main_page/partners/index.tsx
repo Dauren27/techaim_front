@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import ButtonComponent from '../../../components/buttons/button';
 import OneRowSliderComponent from '../../../components/slider/one_row_slider';
 import { Link } from 'react-router-dom';
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 
 function MainPagePartners(props: any) {
   const { t } = useTranslation();

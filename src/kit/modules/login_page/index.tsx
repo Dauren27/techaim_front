@@ -5,8 +5,7 @@ import AuthContext from "../../../context/authContext";
 import {useHistory} from "react-router-dom";
 import {postAuthData} from "../../../api/axiosApiRequest";
 import { useTranslation } from 'react-i18next';
-// tslint:disable-next-line:no-var-requires
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 
 const LoginPage: FC = () => {
     const errRef = useRef() as React.MutableRefObject<HTMLParagraphElement>;

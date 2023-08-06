@@ -1,13 +1,13 @@
-const mentor = require("../shared/images/mentors_page/mentor.png")
-const mentor1=require("../shared/images/mentors_page/mentor1.png")
-const mentor2=require("../shared/images/mentors_page/mentor2.png")
-const mentor3=require("../shared/images/mentors_page/mentor3.png")
-const mentor4=require("../shared/images/mentors_page/mentor4.png")
-const mentor5=require("../shared/images/mentors_page/mentor5.png")
+import mentor from "../shared/images/mentors_page/mentor.png";
+import mentor1 from "../shared/images/mentors_page/mentor1.png";
+import mentor2 from "../shared/images/mentors_page/mentor2.png";
+import mentor3 from "../shared/images/mentors_page/mentor3.png";
+import mentor4 from "../shared/images/mentors_page/mentor4.png";
+import mentor5 from "../shared/images/mentors_page/mentor5.png";
 export const mentors = [
   {
     id: 0,
-    logo_url: mentor ,
+    logo_url: mentor,
   },
   {
     id: 1,

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 
 const center = {
   lat: 42.87802851184175,

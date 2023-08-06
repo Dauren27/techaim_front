@@ -9,7 +9,7 @@ import instagram from "../../../shared/icons/instagram_icon_no_border.svg";
 import linkedin from "../../../shared/icons/linkedin_icon_no_border.svg";
 import twitter from "../../../shared/icons/twitter_icon_no_border.svg";
 
-const styles = require("./index.scss");
+import styles from "./index.module.scss";
 
 export default function Footer() {
   const { t } = useTranslation();

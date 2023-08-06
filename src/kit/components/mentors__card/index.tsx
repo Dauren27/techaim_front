@@ -3,10 +3,10 @@ import ContentLoader from 'react-content-loader';
 import { path } from '../../../api/ApiRequest';
 import { Link } from 'react-router-dom';
 
-const styles = require('./index.scss');
-const avatarIcon = require('../../../shared/icons/person.svg');
-const linkedinIcon = require('../../../shared/icons/icon-linkedin-grey.svg');
-const instagram = require('../../../shared/icons/icon-instagram-grey.svg');
+import styles from './index.module.scss';
+import avatarIcon from '../../../shared/icons/person.svg';
+import linkedinIcon from '../../../shared/icons/icon-linkedin-grey.svg';
+import instagram from '../../../shared/icons/icon-instagram-grey.svg';
 
 
 type CardType = 'team' | 'mentor';

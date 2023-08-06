@@ -5,7 +5,7 @@ import { TGetNews } from "./TCreateNews";
 import { useHistory } from 'react-router-dom';
 import {Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@material-ui/core";
 
-const styles = require('./index.scss');
+import styles from './index.module.scss';
 
 export default function AdminEditNews() {
     const history= useHistory()

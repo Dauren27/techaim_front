@@ -4,7 +4,7 @@ import {editNews, getNewsById} from "../../../../api/axiosApiRequest";
 import {TGetNewsById} from "./TEditNews";
 import { useParams } from 'react-router-dom';
 
-const styles = require('../index.scss');
+import styles from '../index.module.scss';
 
 interface EditNewsParams{
     id:string;

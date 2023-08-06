@@ -3,7 +3,7 @@ import Dropdown from 'react-dropdown';
 import { ABOUT_US } from '../../../../misc/header'
 
 
-// const styles = require('./index.scss')
+// import styles from './index.module.scss'
 
 interface Props {
     onChange: (option: any) => void

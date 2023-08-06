@@ -4,7 +4,7 @@ import {editPartner, getPartnerById} from "../../../../api/axiosApiRequest";
 import {TGetPartnerById} from "../admin_edit_partners/TEditPartners";
 import {useHistory, useParams} from "react-router-dom";
 
-const styles = require('../../admin_news/index.scss');
+import styles from '../../admin_news/index.module.scss';
 
 interface EditPartnerParams {
     id: string;
