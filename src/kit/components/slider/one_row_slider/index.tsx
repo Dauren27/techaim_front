@@ -85,7 +85,7 @@ export default function OneRowSliderComponent (props:Props) {
     return (
       <div   className={styles.one_row_slider_wrapper}>
         <Slider {...settings}> 
-      {partners.map((partners:any) => (
+      {partners && partners.map((partners:any) => (
             <div
               key={Math.ceil(Math.random() * 100)}
               className={styles.slider_item}
