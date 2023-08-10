@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 
 import quote1_avatar from "../../../shared/images/team_members/aitirgan_zulpukarova_avatar.png";
 import quote2_avatar from "../../../shared/images/join_team-page/Asel.png";
-import volonter from "../../../shared/images/join_team-page/volonter.jpg";
+import volonter from "../../../shared/images/join_team-page/Asel.png";
 
 import styles from "./index.module.scss";
 
