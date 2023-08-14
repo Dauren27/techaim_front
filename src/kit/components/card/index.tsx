@@ -32,7 +32,6 @@ interface ISocialLinks {
 export default function TeamCard(props: Props) {
   const team_member = props;
 
-  console.log(team_member);
   const facebookLink =
     team_member.socialLinks && team_member.socialLinks.facebook ? (
       <Link

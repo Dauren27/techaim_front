@@ -1,11 +1,13 @@
-export const path = process.env.REACT_APP_PUBLIC_API_PATH;
+export const path = process.env.REACT_APP_PUBLIC_API_PATH
+  ? process.env.REACT_APP_PUBLIC_API_PATH
+  : "https://techaim-backend.onrender.com";
 export default class ApiRequest {
   static formParamsString(params: { [key: string]: any } = {}) {
     return Object.keys(params)
       .map((key) => {
         return `${key}=${encodeURIComponent(params[key])}`;
       })
-      .join('&');
+      .join("&");
   }
 
   static async get(url: string, params: { [key: string]: any } = {}) {

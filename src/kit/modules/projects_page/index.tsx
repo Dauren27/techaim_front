@@ -7,6 +7,7 @@ import { RootState } from "../../../store/reducers/rootReducer";
 import { fetchProjectsRequest } from "../../../store/actions/projectsActions";
 import { useTranslation } from "react-i18next";
 import styles from "./index.module.scss";
+import StateCheck from "../../components/state_check";
 
 export default function ProjectsPage() {
   const dispatch = useDispatch();
@@ -25,23 +26,27 @@ export default function ProjectsPage() {
       </section>
       <SectionHeader title={t("projects_title")} underline />
       <section className={styles.projects_section}>
-        {projects.map((p: any) => (
-          <div key={p.id} className={styles.project}>
-            <ProjectCard
-              key={p.id}
-              id={p.id}
-              name={p.name}
-              goal={p.goal}
-              result={p.result}
-              beginDate={p.beginDate}
-              endDate={p.endDate}
-              lang={p.lang}
-              photoIds={p.photoIds}
-            />
-          </div>
-        ))}
-        {pending && <h2>Loading...</h2>}
-        {error && error.message && <h2>{error.message}</h2>}
+        {projects &&
+          projects.map((p: any) => (
+            <div key={p.id} className={styles.project}>
+              <ProjectCard
+                key={p.id}
+                id={p.id}
+                name={p.name}
+                goal={p.goal}
+                result={p.result}
+                beginDate={p.beginDate}
+                endDate={p.endDate}
+                lang={p.lang}
+                photoIds={p.photoIds}
+              />
+            </div>
+          ))}
+        <StateCheck
+          error={error && error?.message}
+          pending={pending}
+          data={projects}
+        />
       </section>
     </>
   );

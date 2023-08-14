@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 import styles from "./index.module.scss";
+import StateCheck from "../../components/state_check";
 
 export default function TeamPage() {
   const { t } = useTranslation();
@@ -22,34 +23,8 @@ export default function TeamPage() {
   );
   useEffect(() => {
     dispatch(fetchTeamMembersRequest());
-  }, []);
-  useEffect(() => {
     dispatch(fetchSupervisorsRequest());
   }, []);
-
-  // let body: JSX.Element;
-
-  // if (!team_members || team_members.length === 0) {
-  //   return (body = (
-  //     <div className={styles.news_content}>
-  //       <div>No news found</div>
-  //     </div>
-  //   ));
-  // } else if (error) {
-  //   return (body = (
-  //     <div className={styles.news_content}>
-  //       <div>Some error occured</div>
-  //     </div>
-  //   ));
-  // } else if (pending) {
-  //   return <div>Pending</div>;
-  // } else {
-  //   body = (
-  //     <div className={styles.news_content}>
-  //       <div className={styles.right_column}>{}</div>
-  //     </div>
-  //   );
-  // }
 
   return (
     <>
@@ -73,7 +48,11 @@ export default function TeamPage() {
                 email={el.email}
               />
             ))}
-          {error && <h2>Пройзошла ошибка при загрузке</h2>}
+          <StateCheck
+            error={error && error?.message}
+            pending={pending}
+            data={team_members}
+          />
         </div>
       </section>
       <section className={[styles.info_section].join("")}>
@@ -113,7 +92,7 @@ export default function TeamPage() {
       <section className={[styles.supervisors_section].join("")}>
         <SectionHeader title={t("team_title1")} />
         <div className={[styles.supervisors_cards].join("")}>
-          {supervisors.map((el: any) => (
+          {supervisors && supervisors.map((el: any) => (
             <SupervisorCard
               id={el.id}
               key={el.id}
@@ -123,6 +102,11 @@ export default function TeamPage() {
               bio={el.bio}
             />
           ))}
+          <StateCheck
+            error={error && error?.message}
+            pending={pending}
+            data={supervisors}
+          />
         </div>
       </section>
     </>

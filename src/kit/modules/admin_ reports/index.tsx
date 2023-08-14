@@ -54,7 +54,6 @@ export default function AdminReport() {
 
     const handleFileSelect = (event: ChangeEvent<HTMLInputElement>) => {
         if (event.target.files) {
-            console.log(event.target.name)
             if (event.target.name == "kyrPdf") {
                 setSelectedFileKyr(event.target.files[0])
             }

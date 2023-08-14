@@ -7,6 +7,7 @@ import { RootState } from "../../../store/reducers/rootReducer";
 import { fetchMentorsRequest } from "../../../store/actions/mentorsAction";
 
 import styles from "./index.module.scss";
+import StateCheck from "../../components/state_check";
 
 export default function MentorsPage() {
   const dispatch = useDispatch();
@@ -38,24 +39,11 @@ export default function MentorsPage() {
                 size="normal"
               />
             ))}
-          {}
-          {error ? (
-            <div className={styles.news_content}>
-              <div>Some error occured</div>
-            </div>
-          ) : (
-            !mentors ||
-            (mentors.length === 0 && (
-              <div className={styles.news_content}>
-                <h3>No mentors found</h3>
-              </div>
-            ))
-          )}
-          {pending && (
-            <div className={styles.news_content}>
-              <div>Loading...</div>
-            </div>
-          )}
+          <StateCheck
+            error={error && error?.message}
+            pending={pending}
+            data={mentors}
+          />
         </div>
       </section>
     </>

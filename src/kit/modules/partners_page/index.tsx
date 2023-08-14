@@ -9,6 +9,7 @@ import Breadcrumbs from "../../components/breadcrumbs";
 import SectionHeader from "../../components/headers/section-header";
 import { useTranslation } from "react-i18next";
 import styles from "./index.module.scss";
+import StateCheck from "../../components/state_check";
 
 export default function PartnersPage() {
   const { t } = useTranslation();
@@ -26,14 +27,20 @@ export default function PartnersPage() {
       </section>
       <SectionHeader title={t("parnersTitle")} underline />
       <div className={styles.one_row_slider_wrapper}>
-        {partners.map((partners: any) => (
-          <div className={styles.slider_item} key={partners.id}>
-            <img
-              src={`${path}/public-api/partner/${partners.id}/logo`}
-              alt={partners.name}
-            />
-          </div>
-        ))}
+        {partners &&
+          partners.map((partners: any) => (
+            <div className={styles.slider_item} key={partners.id}>
+              <img
+                src={`${path}/public-api/partner/${partners.id}/logo`}
+                alt={partners.name}
+              />
+            </div>
+          ))}
+        <StateCheck
+          error={error && error?.message}
+          pending={pending}
+          data={partners}
+        />
       </div>
     </>
   );

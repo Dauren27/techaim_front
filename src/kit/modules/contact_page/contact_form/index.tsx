@@ -33,7 +33,6 @@ export default function ContactForm() {
         className={[styles.form_input].join('')}
         type='text'
         placeholder={t("form_name")}
-        disabled
       />
       <div className={[styles.error_message].join('')}>
         <ValidationError
@@ -53,7 +52,6 @@ export default function ContactForm() {
         className={[styles.form_input].join('')}
         type='email'
         placeholder= {t("form_email")}
-        disabled
       />
       <div className={[styles.error_message].join('')}>
         <ValidationError
@@ -73,7 +71,6 @@ export default function ContactForm() {
         className={[styles.form_input].join('')}
         placeholder= {t("form_message")}
         rows={7}
-        disabled
       />
       <div className={[styles.error_message].join('')}>
         <ValidationError
@@ -83,7 +80,7 @@ export default function ContactForm() {
           errors={state.errors}
         />
       </div>
-      <Button  onClick={() => console.log('send')} style={{ width: '100%' }}>
+      <Button style={{ width: '100%' }}>
          {t("form_button")}
       </Button>
     </form>

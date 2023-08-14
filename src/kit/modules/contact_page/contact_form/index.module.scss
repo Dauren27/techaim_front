@@ -10,7 +10,7 @@
   padding: 56px;
 
   .form_header {
-    font-family: Montserrat,"Lato",sans-serif;
+    font-family: 'Montserrat',"Lato",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -24,16 +24,15 @@
     border: 1px solid $primary;
     box-sizing: border-box;
     border-radius: 10px;
-    font-family: Montserrat,"Lato",sans-serif;
-    text-transform: uppercase;
+    font-family: "Montserrat","Lato",sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.04em;
     color: #030303;
-    opacity: 0.5;
-    padding: 21px 42px;
+    opacity: 0.8;
+    padding: 16px 32px;
   }
   .form_label {
     font-family: Montserrat,"Lato",sans-serif;

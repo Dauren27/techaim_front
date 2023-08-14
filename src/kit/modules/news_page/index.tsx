@@ -9,6 +9,7 @@ import SectionHeader from "../../components/headers/section-header";
 import NewsFeed from "./news_feed";
 import NewsPopular from "./news_popular";
 import styles from "./index.module.scss";
+import StateCheck from "../../components/state_check";
 
 export default function NewsPage() {
   const [isOpen, setOpen] = useState(false);
@@ -81,35 +82,17 @@ export default function NewsPage() {
       </div>
       <div className={styles.container}>
         <>
-          {news && news.length !== 0 && (
+          {news && news.length > 0 && (
             <div>
               <NewsFeed news={news} />
               <NewsPopular news={news} />
             </div>
           )}
-          {error ? (
-            error.message ? (
-              <div className={styles.news_content}>
-                <div>{error.message}</div>
-              </div>
-            ) : (
-              <div className={styles.news_content}>
-                <div>Some error occured</div>
-              </div>
-            )
-          ) : (
-            !news ||
-            (news.length === 0 && (
-              <div className={styles.news_content}>
-                <h3>No news found</h3>
-              </div>
-            ))
-          )}
-          {pending && (
-            <div className={styles.news_content}>
-              <div>Loading...</div>
-            </div>
-          )}
+          <StateCheck
+            error={error && error?.message}
+            pending={pending}
+            data={news}
+          />
         </>
       </div>
     </section>

@@ -32,7 +32,7 @@ export default function NewsPopular(props: IProps) {
         <line y1='2' x2='1513' y2='2' stroke='#FFA726' strokeWidth='3' />
       </svg>
         <div className={styles.feed_right}>
-        {news.slice(1,4).map((elem) => (
+        {news && news.slice(1,4).map((elem) => (
           <div className={styles.card}>
             <Link to={`./news/details/${elem.id}`} >
                  <div

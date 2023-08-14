@@ -11,7 +11,7 @@ import { formsTypes, formTypes } from '../actionTypes/FormTypes';
 import { path } from '../../api/ApiRequest';
 
 const getForms = (lang: string = 'RUS') =>
-  axios.get<IForms>(`${path}public-api/form/mentie1`);
+  axios.get<IForms>(`${path}/public-api/${lang}/mentors`);
 
 const getForm = (lang: string = 'RUS', id?: number) =>  
   axios.get<IForm>(`${path}/api/admin/form/${id}`);

@@ -27,7 +27,7 @@ export default function NewsFeed(props: IProps) {
           <NewsCard data={news[0]} />
         </Link>
         <div className={styles.feed_right}>
-          {news.slice(1, 3).map((n) => (
+          {news && news.slice(1, 3).map((n) => (
             <div className={styles.card}>
               <Link to={`./news/details/${n.id}`} >
               <div

@@ -19,16 +19,10 @@ const ambassadors = mentors.filter((m, i) => i < 6);
 
 const CommunityPage = (props: any) => {
     const { t } = useTranslation();
-    const dispatch = useDispatch();
     const { pending, forms, error } = useSelector(
         (state: RootState) => state.forms
     );
-    useEffect(() => {
-        dispatch(fetchFormsRequest());
-
-    }, []);
     const { name,url } = forms
-    console.log(url)
     let body: JSX.Element = <span></span>;
     let errorText: JSX.Element = <span></span>;
     let loading: JSX.Element = <span></span>;
@@ -40,7 +34,7 @@ const CommunityPage = (props: any) => {
 
     if (!pending) {
         loading = <div className={styles.text_content}>Loading ...</div>;
-    } else if (!forms || forms === []) {
+    } else if (!forms || forms.length===0) {
         body = (
             <div className={styles.text_content}>
                 {'Seems that there are no news'}

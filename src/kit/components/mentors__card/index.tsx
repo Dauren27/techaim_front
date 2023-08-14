@@ -43,7 +43,6 @@ interface IMentorSkillDtos{
 
 export default function MentorCard(props: Props) {
   const mentor=props
-  console.log(mentor.mentorTrDto)
   const facebookLink = mentor.socialLink && mentor.socialLink.facebook ? (
     <Link to={{ pathname: mentor.socialLink.facebook }} target="_blanck">
       <img src={instagram} alt="fb_icon" />
