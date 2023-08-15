@@ -12,11 +12,11 @@ const StateCheck = ({ pending, error, data }: Props) => {
   return (
     <div className={styles.check}>
       {pending ? (
-        <p>{t("Loading...")}</p>
+        <p>{t("loading")}</p>
       ) : error ? (
-        <p>{t(error)}</p>
+        <p>{error != "" ? error : t("error")}</p>
       ) : (
-        data.length === 0 && <p>{t("No data found")}</p>
+        data.length === 0 && <p>{t("no_data")}</p>
       )}
     </div>
   );

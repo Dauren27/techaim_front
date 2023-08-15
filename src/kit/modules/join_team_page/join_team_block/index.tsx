@@ -30,9 +30,7 @@ export default function JoinTeamBlock(props: Props) {
                 <a key={i} href={el.href}>
                   <ButtonComponent
                     color="yellow"
-                    onClick={() => {
-                      console.log("Button clicked");
-                    }}
+                    
                   >
                     {t("Apply")}
                   </ButtonComponent>

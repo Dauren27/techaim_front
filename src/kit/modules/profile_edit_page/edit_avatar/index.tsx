@@ -12,7 +12,6 @@ export default function EditAvatar(props: Props) {
   function changeAvatar(e: any) {
     const file = e.currentTarget.files[0];
     props.setAvatar(file);
-    console.log(file);
   }
 
   return (

@@ -10,7 +10,7 @@ const center = {
 
 export default function ContactMap() {
   return (
-    <LoadScript googleMapsApiKey='AIzaSyDTUotrPOVgPlgiReJERKICuJik-UFhfFA'>
+    <LoadScript googleMapsApiKey='AIzaSyAc8Zouv4-cszEwdJ3AX5i7nzy8zuJxswc'>
       <GoogleMap mapContainerClassName={styles.container} center={center} zoom={15}>
         <Marker
           position={center}

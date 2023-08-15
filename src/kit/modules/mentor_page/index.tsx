@@ -30,7 +30,6 @@ export default function MentorPage() {
     socialLink,
     company,
   } = mentor;
-  console.log(company);
   const facebookLink =
     socialLink && socialLink.facebook ? (
       <Link

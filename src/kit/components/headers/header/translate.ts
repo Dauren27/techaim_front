@@ -2,7 +2,7 @@ export default {
   en: {
     'Our team': 'Our team',
     'Our mentors': 'Our mentors',
-    'Become part of the team': 'Become part of the team',
+    'Become part of the team': 'Join the team',
     'Reports':"Reports",
     'About us': 'About us',
     Services: 'Services',

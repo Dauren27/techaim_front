@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import styles from "./index.module.scss";
 
@@ -6,10 +7,11 @@ export default function TableSearch(props: any) {
   const [isOpen, setOpen] = useState(false);
 
   const years = ["Все", "2019", "2020", "2021"];
+  const { t } = useTranslation();
 
   return (
     <div className={[styles.search_bar].join(" ")}>
-      <span className={[styles.custom_label].join(" ")}>Выбрать год:</span>
+      <span className={[styles.custom_label].join(" ")}>{t("reports_choose")}</span>
       <div className={[styles.custom_select_wrapper].join(" ")}>
         <div
           className={[styles.custom_select, isOpen ? styles.open : ""].join(

@@ -39,8 +39,7 @@
       padding: 20px;
       border: 1px solid lightgray;
       font-style: normal;
-      text-transform: uppercase;
-      font-size: 12px;
+      font-size: 15px;
       width: 100%;
       margin-bottom: 40px;
     }
@@ -61,6 +60,7 @@
     }
     .login_form{
       width: 100% !important;
+      padding: 30px;
     }
   }
 }
@@ -78,6 +78,8 @@
     .login_form{
       width: 100% !important;
       height: 400px !important;
+      padding: 30px;
+
     }
   }
 }

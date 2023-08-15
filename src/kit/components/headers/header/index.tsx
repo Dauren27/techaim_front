@@ -145,7 +145,7 @@ const Header = () => {
                   RU
                 </option>
                 <option key={"kyr"} value={"kyr"}>
-                  KYR
+                  KG
                 </option>
               </Select>
             </FormControl>

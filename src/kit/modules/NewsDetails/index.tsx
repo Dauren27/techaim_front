@@ -35,7 +35,6 @@ export default function NewsDetail() {
     fullDescription,
     teamMemberNameDto = {},
   } = currentNews;
-  console.log();
   return (
     <>
       <section className={styles.container}>

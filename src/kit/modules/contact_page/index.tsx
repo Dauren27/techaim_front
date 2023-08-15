@@ -1,12 +1,10 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
 import SectionHeader from "../../components/headers/section-header";
 import Breadcrumbs from "../../components/breadcrumbs";
 import ContactForm from "./contact_form";
 import ContactMap from "./contact_map";
 import { useTranslation } from "react-i18next";
 import phone_icon from "../../../shared/icons/icon-phone-grey.svg";
-import globe_icon from "../../../shared/icons/icon-globe-grey.svg";
 import mail_icon from "../../../shared/icons/icon-mail-grey.svg";
 import fb_icon from "../../../shared/icons/icon-fb-grey.svg";
 import twitter_icon from "../../../shared/icons/icon-twitter-grey.svg";
@@ -46,10 +44,6 @@ export default function ContactPage() {
                 {t("online_service")}
               </h2>
               <div className={[styles.contact_wrapper].join(" ")}>
-                <img src={globe_icon} alt="globe_icon" />
-                <p>www.techaim.org</p>
-              </div>
-              <div className={[styles.contact_wrapper].join(" ")}>
                 <img src={mail_icon} alt="mail_icon" />
                 <p>techaim@techaim.org</p>
               </div>
@@ -61,30 +55,35 @@ export default function ContactPage() {
               <a
                 href="https://www.instagram.com/techaim.kg"
                 className={[styles.social_link].join(" ")}
-              >
+                target="_blank"
+                >
                 <img src={instagram_icon} alt="icon-instagram" />
               </a>
               <a
                 href="https://www.facebook.com/techaim.kg"
                 className={[styles.social_link].join(" ")}
+                target="_blank"
               >
                 <img src={fb_icon} alt="icon-fb" />
               </a>
               <a
                 href="https://kg.linkedin.com/company/techaim"
                 className={[styles.social_link].join(" ")}
+                target="_blank"
               >
                 <img src={linkedin_icon} alt="icon-linkedin" />
               </a>
               <a
                 href="https://twitter.com/techaimkg"
                 className={[styles.social_link].join(" ")}
+                target="_blank"
               >
                 <img src={twitter_icon} alt="icon-twitter" />
               </a>
               <a
                 href="https://vt.tiktok.com/ZSRYpRCNY/"
                 className={[styles.social_link].join(" ")}
+                target="_blank"
               >
                 <img src={tiktok_icon} alt="icon-tiktok" />
               </a>

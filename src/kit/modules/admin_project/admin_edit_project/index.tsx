@@ -53,7 +53,6 @@ const AdminEditProject: FC = () => {
             facebook,
             createProjectTrDtos: [payload, DEFAULT_INFO_ENG, DEFAULT_INFO_KYR]
         }
-        console.log(values)
         formData.append("photo", selectedFile);
         for (const photo of selectedFiles) {
             formData.append("photos", new Blob([photo as File]))

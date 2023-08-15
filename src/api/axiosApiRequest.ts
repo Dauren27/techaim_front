@@ -27,15 +27,14 @@ const axiosAuth = axios.create({
 
 const axiosCustom = axios.create({
   baseURL: "https://techaim-backend.onrender.com",
+  withCredentials: true,
 });
 export const postAuthData = async (values: {
   username: string;
   password: string;
 }) =>
   // tslint:disable-next-line:no-console
-  await axiosAuth
-    .post<TAuth>(`/api/auth/login`, values)
-    .then((response) => console.log(response));
+  await axiosAuth.post<TAuth>(`/api/auth/login`, values).then((response) => {});
 
 export const sendLogout = async () =>
   await axiosAuth.post(`/api/auth/logout`).then((response) => response.data);
@@ -78,7 +77,9 @@ export const getMentorById = async (id: string) =>
   await axiosCustom.get<TGetMentorById>(`/public-api/RUS/mentor/${id}`);
 // tslint:disable-next-line:no-shadowed-variable
 export const editMentor = async (id: string, payload: FormData) =>
-  await axiosCustom.put(`/public-api/mentor/${id}`, payload).then((res) => res.data);
+  await axiosCustom
+    .put(`/public-api/mentor/${id}`, payload)
+    .then((res) => res.data);
 
 //MentorSkills
 export const createMentorSkills = async (payload: FormData) =>
@@ -111,7 +112,9 @@ export const getPartner = async () =>
 export const getPartnerById = async (id: string) =>
   await axiosCustom.get<TGetPartnerById>(`/public-api/RUS/partner/${id}`);
 export const editPartner = async (id: string, payload: FormData) =>
-  await axiosCustom.put(`/api/admin/partner/${id}`, payload).then((res) => res.data);
+  await axiosCustom
+    .put(`/api/admin/partner/${id}`, payload)
+    .then((res) => res.data);
 
 //supervisor
 export const createSupervisor = async (payload: FormData) =>
@@ -141,7 +144,9 @@ export const createNews = async (payload: FormData) =>
     .then((response) => console.log(response));
 
 export const deleteNews = async (id: number) =>
-  await axiosCustom.delete(`/api/admin/news/${id}`).then((response) => response.data);
+  await axiosCustom
+    .delete(`/api/admin/news/${id}`)
+    .then((response) => response.data);
 
 export const getNews = async () =>
   await axiosCustom.get<TGetNews>(`/public-api/RUS/news`);
@@ -150,7 +155,9 @@ export const getNewsById = async (id: string) =>
   await axiosCustom.get<TGetNewsById>(`/public-api/RUS/news/${id}`);
 
 export const editNews = async (id: string, payload: FormData) =>
-  await axiosCustom.put(`/api/admin/news/${id}`, payload).then((res) => res.data);
+  await axiosCustom
+    .put(`/api/admin/news/${id}`, payload)
+    .then((res) => res.data);
 
 //project
 
@@ -192,4 +199,6 @@ export const getReportById = async (id: string) =>
   await axiosCustom.get<TGetReportById>(`/public-api/report/${id}/RUS/pdf`);
 // tslint:disable-next-line:no-shadowed-variable
 export const editReport = async (id: string, payload: FormData) =>
-  await axiosCustom.put(`/api/admin/report/${id}`, payload).then((res) => res.data);
+  await axiosCustom
+    .put(`/api/admin/report/${id}`, payload)
+    .then((res) => res.data);

@@ -31,9 +31,7 @@ export default function ProjectCard(props: Props) {
           <p className={styles.card_description}>{projects.goal}</p>
           <Button
             className={styles.card_button}
-            onClick={() => {
-              console.log("click");
-            }}
+            
           >
             {t("projects_button")}
           </Button>

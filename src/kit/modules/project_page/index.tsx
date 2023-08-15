@@ -22,7 +22,6 @@ function ProjectPage(props: any) {
   }, []);
 
   const { beginDate, endDate, photoIds, name, goal, result } = project;
-  console.log(photoIds);
   const { t } = useTranslation();
   return (
     <>

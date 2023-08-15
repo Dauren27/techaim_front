@@ -10,7 +10,6 @@ interface Props {
   name: string;
   lang: string;
 }
-
 export default function ReportsTable(props: Props) {
   const report = props;
 

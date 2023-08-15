@@ -6,8 +6,10 @@ import TableSearch from "./reports_table/table_search";
 import { getReport } from "../../../api/axiosApiRequest";
 import { TGetReport } from "../admin_ reports/TCreateReports";
 import styles from "./index.module.scss";
+import { useTranslation } from "react-i18next";
 
 export default function ReportsPage() {
+  const { t } = useTranslation();
   const [reports, setData] = useState<TGetReport>();
   const [selectedYear, setSelectedYear] = useState("Все");
 
@@ -26,9 +28,9 @@ export default function ReportsPage() {
   return (
     <>
       <section>
-        <Breadcrumbs page_title="Отчеты" page_url="/reports" />
+        <Breadcrumbs page_title={t("reports")} page_url="/reports" />
       </section>
-      <SectionHeader title="Отчеты" />
+      <SectionHeader title={t("reports")} />
       <section>
         <div>
           <div className={[styles.table_wrapper].join(" ")}>
@@ -42,10 +44,10 @@ export default function ReportsPage() {
               <div className={[styles.table_row].join(" ")}>
                 <div className={[styles.table_header].join(" ")}>№</div>
                 <div className={[styles.table_header].join(" ")}>
-                  Название / Предпросмотр
+                  {t("report_name")}
                 </div>
-                <div className={[styles.table_header].join(" ")}>Год</div>
-                <div className={[styles.table_header].join(" ")}>Скачать</div>
+                <div className={[styles.table_header].join(" ")}>{t("report_year")}</div>
+                <div className={[styles.table_header].join(" ")}>{t("report_download")}</div>
               </div>
             </div>
           </div>

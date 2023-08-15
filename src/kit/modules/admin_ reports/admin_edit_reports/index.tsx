@@ -63,7 +63,6 @@ const AdminEditTeam: FC = () => {
 
     const handleFileSelect = (event: ChangeEvent<HTMLInputElement>) => {
         if (event.target.files) {
-            console.log(event.target.name)
             if (event.target.name == "kyrPdf") {
                 setSelectedFileKyr(event.target.files[0])
             }
@@ -75,7 +74,6 @@ const AdminEditTeam: FC = () => {
             }
         }
         // tslint:disable-next-line:no-console
-        else console.log("error while handling file selection");
     }
 
     const handleChangeData = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

@@ -64,8 +64,6 @@ export default function AdminReport() {
                 setSelectedFileEng(event.target.files[0])
             }
         }
-        // tslint:disable-next-line:no-console
-        else console.log("error while handling file selection");
     }
 
 

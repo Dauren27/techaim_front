@@ -8,8 +8,10 @@ import { fetchMentorsRequest } from "../../../store/actions/mentorsAction";
 
 import styles from "./index.module.scss";
 import StateCheck from "../../components/state_check";
+import { useTranslation } from "react-i18next";
 
 export default function MentorsPage() {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const { error, mentors, pending } = useSelector(
     (state: RootState) => state.mentors
@@ -21,9 +23,9 @@ export default function MentorsPage() {
   return (
     <>
       <section>
-        <Breadcrumbs page_title={"Менторы"} page_url="/mentors" />
+        <Breadcrumbs page_title={t("mentors")} page_url="/mentors" />
       </section>
-      <SectionHeader title={"Менторы"} underline />
+      <SectionHeader title={t("mentors")} underline />
       <section className={[styles.cards_section].join("")}>
         <div className={[styles.cards_wrapper].join("")}>
           {mentors &&
