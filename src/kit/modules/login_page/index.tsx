@@ -6,56 +6,35 @@ import { useHistory } from "react-router-dom";
 import { postAuthData } from "../../../api/axiosApiRequest";
 import { useTranslation } from "react-i18next";
 import styles from "./index.module.scss";
+import { useLoginMutation } from "../../../store/queryReducers/authApi";
 
 const LoginPage: FC = () => {
-  const errRef = useRef() as React.MutableRefObject<HTMLParagraphElement>;
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [errorMessage, setErrorMessage] = useState("");
   const { isUserLoggedIn, setIsUserLoggedIn } = useContext(AuthContext);
   const history = useHistory();
   const { t } = useTranslation();
-  useEffect(() => {
-    setErrorMessage("");
-  }, [email, password]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    await postAuthData({ username: email, password })
-      .then(() => {
-        setIsUserLoggedIn(true);
-        localStorage.setItem("auth", "true");
-      })
-      .catch((err) => {
-        setErrorMessage(err.toString());
-      });
+    login({ username: email, password });
   };
-
+  const [login, { isSuccess, isLoading, isError }] = useLoginMutation();
   if (isUserLoggedIn) {
     history.push("/admin");
   }
+  useEffect(() => {
+    if (isSuccess) {
+      history.push("/admin");
+      setIsUserLoggedIn(true);
+      localStorage.setItem("auth", "true");
+    }
+  }, [isSuccess]);
   return (
     <div className={styles.login_page}>
       <p className={styles.login_title}>{t("login_title")}</p>
       <div className={styles.login_form}>
         <p className={styles.form_title}>{t("login")}</p>
-        {errorMessage ? (
-          <p
-            ref={errRef}
-            style={{
-              color: "red",
-              fontWeight: 500,
-              fontSize: "32px",
-              backgroundColor: "white",
-              padding: "10px",
-              textAlign: "center",
-            }}
-          >
-            {errorMessage}
-          </p>
-        ) : (
-          ""
-        )}
         <form onSubmit={handleLogin}>
           <input
             id="email"
@@ -82,6 +61,42 @@ const LoginPage: FC = () => {
             >
               {t("login")}
             </Button>
+            {isLoading && (
+              <p
+                style={{
+                  textAlign: "center",
+                  color: "#287ff1",
+                  marginTop: "10px",
+                  fontSize: "20px",
+                }}
+              >
+                Загрузка...
+              </p>
+            )}
+            {isSuccess && (
+              <p
+                style={{
+                  textAlign: "center",
+                  color: "#0bc136",
+                  marginTop: "10px",
+                  fontSize: "20px",
+                }}
+              >
+                Вы успешно авторизовались
+              </p>
+            )}
+            {isError && (
+              <p
+                style={{
+                  textAlign: "center",
+                  color: "#dd2626",
+                  marginTop: "10px",
+                  fontSize: "20px",
+                }}
+              >
+                Произошла ошибка
+              </p>
+            )}
           </div>
         </form>
       </div>

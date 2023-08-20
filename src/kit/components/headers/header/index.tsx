@@ -6,7 +6,7 @@ import { Button, FormControl, Select } from "@material-ui/core";
 import { ReactComponent as CloseMenu } from "../../../../shared/icons/x.svg";
 import { ReactComponent as MenuIcon } from "../../../../shared/icons/menu.svg";
 import AuthContext from "../../../../context/authContext";
-import { sendLogout } from "../../../../api/axiosApiRequest";
+import { useLogoutMutation } from "../../../../store/queryReducers/authApi";
 
 import logo from "../../../../shared/icons/logo.png";
 
@@ -49,8 +49,9 @@ const Header = () => {
   const { pathname } = useLocation();
   const { t, i18n } = useTranslation();
   const { isUserLoggedIn, setIsUserLoggedIn } = useContext(AuthContext);
+  const [logout, {}] = useLogoutMutation();
   const handleLogOut = () => {
-    sendLogout();
+    logout();
     setIsUserLoggedIn(false);
     localStorage.removeItem("auth");
     history.push("/");

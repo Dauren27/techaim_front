@@ -1,6 +1,7 @@
 export const path = process.env.REACT_APP_PUBLIC_API_PATH
   ? process.env.REACT_APP_PUBLIC_API_PATH
   : "https://techaim-backend.onrender.com";
+  
 export default class ApiRequest {
   static formParamsString(params: { [key: string]: any } = {}) {
     return Object.keys(params)

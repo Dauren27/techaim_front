@@ -1,4 +1,3 @@
-import axios from "axios";
 import { TGetTeam } from "../kit/modules/admin_our_team/TCreateTeammate";
 import { IGetMentor } from "../kit/modules/admin_mentors/TCreateMentors";
 import { TGetPartners } from "../kit/modules/admin_partners/TCreatePartner";
@@ -14,191 +13,168 @@ import { TGetSupervisorById } from "../kit/modules/admin_supervisors/admin_edit_
 import { TGetReportById } from "../kit/modules/admin_ reports/admin_edit_reports/TEditReports";
 import { IGetMentorSkillIds } from "../kit/modules/admin_mentors/admin_mentor_skills/TCreateSkills";
 import { TGetMentorById } from "../kit/modules/admin_mentors/admin_edit_mentor/TEditMentor";
-import { path } from "./ApiRequest";
+import { $api } from ".";
 export type TAuth = {
   username: string;
   password: string;
 };
 
-const axiosAuth = axios.create({
-  withCredentials: true,
-  baseURL: "https://techaim-backend.onrender.com",
-});
-
-const axiosCustom = axios.create({
-  baseURL: "https://techaim-backend.onrender.com",
-  withCredentials: true,
-});
 export const postAuthData = async (values: {
   username: string;
   password: string;
-}) =>
-  // tslint:disable-next-line:no-console
-  await axiosAuth.post<TAuth>(`/api/auth/login`, values).then((response) => {});
+}) => await $api.post<TAuth>(`/api/auth/login`, values).then((response) => {});
 
 export const sendLogout = async () =>
-  await axiosAuth.post(`/api/auth/logout`).then((response) => response.data);
+  await $api.post(`/api/auth/logout`).then((response) => response.data);
 
 //Team
 export const createTeamMember = async (payload: FormData) =>
-  await axiosAuth
+  await $api
     .post(`/api/admin/team_member/create`, payload)
     .then((response) => console.log(response));
 
 export const deleteMember = async (id: number) =>
-  await axiosCustom
+  await $api
     .delete(`/api/admin/team_member/${id}`)
     .then((response) => response.data);
 
 export const getTeamMembers = async () =>
-  await axiosCustom.get<TGetTeam>(`/public-api/RUS/team_members`);
+  await $api.get<TGetTeam>(`/public-api/RUS/team_members`);
 export const getTeamMemberById = async (id: string) =>
-  await axiosCustom.get<TGetTeamById>(`/public-api/RUS/team_member/${id}`);
+  await $api.get<TGetTeamById>(`/public-api/RUS/team_member/${id}`);
 // tslint:disable-next-line:no-shadowed-variable
 export const editTeamMember = async (id: string, payload: FormData) =>
-  await axiosCustom
+  await $api
     .put(`/api/admin/team_member/${id}`, payload)
     .then((res) => res.data);
 // Mentor
 export const createMentor = async (payload: FormData) =>
-  await axiosAuth
+  await $api
     .post(`/public-api/mentor/create`, payload)
     .then((response) => console.log(response));
 
 export const deleteMentor = async (id: number) =>
-  await axiosCustom
+  await $api
     .delete(`/api/admin/mentor/${id}`)
     .then((response) => response.data);
 
 export const getMentor = async () =>
-  await axiosCustom.get<IGetMentor>(`/public-api/RUS/mentors`);
+  await $api.get<IGetMentor>(`/public-api/RUS/mentors`);
 
 export const getMentorById = async (id: string) =>
-  await axiosCustom.get<TGetMentorById>(`/public-api/RUS/mentor/${id}`);
+  await $api.get<TGetMentorById>(`/public-api/RUS/mentor/${id}`);
 // tslint:disable-next-line:no-shadowed-variable
 export const editMentor = async (id: string, payload: FormData) =>
-  await axiosCustom
-    .put(`/public-api/mentor/${id}`, payload)
-    .then((res) => res.data);
+  await $api.put(`/public-api/mentor/${id}`, payload).then((res) => res.data);
 
 //MentorSkills
 export const createMentorSkills = async (payload: FormData) =>
-  await axiosAuth
-    .post(`${path}/public-api/skill/create`, payload)
+  await $api
+    .post(`/public-api/skill/create`, payload)
     .then((response) => console.log(response));
 
 export const deleteMentorSkills = async (id: number) =>
-  await axiosCustom
-    .delete(`/api/admin/skill/${id}`)
-    .then((response) => response.data);
+  await $api.delete(`/api/admin/skill/${id}`).then((response) => response.data);
 
 export const getMentorSkills = async () =>
-  await axiosCustom.get<IGetMentorSkillIds>(`/public-api/skills`);
+  await $api.get<IGetMentorSkillIds>(`/public-api/skills`);
 
 // Partner
 export const createPartner = async (payload: FormData) =>
-  await axiosAuth
+  await $api
     .post(`/api/admin/partner`, payload)
     .then((response) => console.log(response));
 
 export const deletePartner = async (id: number) =>
-  await axiosCustom
+  await $api
     .delete(`/api/admin/partner/${id}`)
     .then((response) => response.data);
 
 export const getPartner = async () =>
-  await axiosCustom.get<TGetPartners>(`/public-api/RUS/partners`);
+  await $api.get<TGetPartners>(`/public-api/RUS/partners`);
 
 export const getPartnerById = async (id: string) =>
-  await axiosCustom.get<TGetPartnerById>(`/public-api/RUS/partner/${id}`);
+  await $api.get<TGetPartnerById>(`/public-api/RUS/partner/${id}`);
 export const editPartner = async (id: string, payload: FormData) =>
-  await axiosCustom
-    .put(`/api/admin/partner/${id}`, payload)
-    .then((res) => res.data);
+  await $api.put(`/api/admin/partner/${id}`, payload).then((res) => res.data);
 
 //supervisor
 export const createSupervisor = async (payload: FormData) =>
-  await axiosAuth
+  await $api
     .post(`/api/admin/supervisor/create`, payload)
     .then((response) => console.log(response));
 
 export const deleteSupervisor = async (id: number) =>
-  await axiosCustom
+  await $api
     .delete(`/api/admin/supervisor/${id}`)
     .then((response) => response.data);
 
 export const getSupervisors = async () =>
-  await axiosCustom.get<IGetSupervisor>(`/public-api/RUS/supervisors`);
+  await $api.get<IGetSupervisor>(`/public-api/RUS/supervisors`);
 
 export const getSupervisorById = async (id: string) =>
-  await axiosCustom.get<TGetSupervisorById>(`/public-api/RUS/supervisor/${id}`);
+  await $api.get<TGetSupervisorById>(`/public-api/RUS/supervisor/${id}`);
 
 export const editSupervisor = async (id: string, payload: FormData) =>
-  await axiosCustom
+  await $api
     .put(`/api/admin/supervisor/${id}`, payload)
     .then((res) => res.data);
 //news
 export const createNews = async (payload: FormData) =>
-  await axiosAuth
+  await $api
     .post(`/api/admin/news`, payload)
     .then((response) => console.log(response));
 
 export const deleteNews = async (id: number) =>
-  await axiosCustom
-    .delete(`/api/admin/news/${id}`)
-    .then((response) => response.data);
+  await $api.delete(`/api/admin/news/${id}`).then((response) => response.data);
 
 export const getNews = async () =>
-  await axiosCustom.get<TGetNews>(`/public-api/RUS/news`);
+  await $api.get<TGetNews>(`/public-api/RUS/news`);
 
 export const getNewsById = async (id: string) =>
-  await axiosCustom.get<TGetNewsById>(`/public-api/RUS/news/${id}`);
+  await $api.get<TGetNewsById>(`/public-api/RUS/news/${id}`);
 
 export const editNews = async (id: string, payload: FormData) =>
-  await axiosCustom
-    .put(`/api/admin/news/${id}`, payload)
-    .then((res) => res.data);
+  await $api.put(`/api/admin/news/${id}`, payload).then((res) => res.data);
 
 //project
 
 export const createProject = async (payload: FormData) =>
-  await axiosAuth
+  await $api
     .post(`/api/admin/project/create`, payload)
     .then((response) => console.log(response));
 
 export const deleteProject = async (id: number) =>
-  await axiosCustom
+  await $api
     .delete(`/api/admin/project/${id}`)
     .then((response) => response.data);
 
 export const getProject = async () =>
-  await axiosCustom.get<TGetProject>(`/public-api/RUS/projects`);
+  await $api.get<TGetProject>(`/public-api/RUS/projects`);
 export const getProjectById = async (id: string) =>
-  await axiosCustom.get<TGetProjectById>(`/public-api/RUS/project/${id}`);
+  await $api.get<TGetProjectById>(`/public-api/RUS/project/${id}`);
 // tslint:disable-next-line:no-shadowed-variable
 export const editProject = async (id: string, payload: FormData) =>
-  await axiosCustom
+  await $api
     .put(`/api/admin/project/update/${id}`, payload)
     .then((res) => res.data);
 
 //REPORTS
 export const createReport = async (payload: FormData) =>
-  await axiosAuth
+  await $api
     .post(`/api/admin/report/create`, payload)
     .then((response) => console.log(response));
 
 export const deleteReport = async (id: number) =>
-  await axiosCustom
+  await $api
     .delete(`/api/admin/report/${id}`)
     .then((response) => response.data);
 
 export const getReport = async () =>
-  await axiosCustom.get<TGetReport>(`/public-api/RUS/reports`);
+  await $api.get<TGetReport>(`/public-api/RUS/reports`);
 
 export const getReportById = async (id: string) =>
-  await axiosCustom.get<TGetReportById>(`/public-api/report/${id}/RUS/pdf`);
+  await $api.get<TGetReportById>(`/public-api/report/${id}/RUS/pdf`);
 // tslint:disable-next-line:no-shadowed-variable
 export const editReport = async (id: string, payload: FormData) =>
-  await axiosCustom
-    .put(`/api/admin/report/${id}`, payload)
-    .then((res) => res.data);
+  await $api.put(`/api/admin/report/${id}`, payload).then((res) => res.data);
