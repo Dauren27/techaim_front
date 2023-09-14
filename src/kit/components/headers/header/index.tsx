@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import translation from "./translate";
 import { FormControl, Select } from "@material-ui/core";
 import { ReactComponent as CloseMenu } from "../../../../shared/icons/x.svg";
 import { ReactComponent as MenuIcon } from "../../../../shared/icons/menu.svg";
-
+import { IoIosArrowDown } from "react-icons/io";
 import logo from "../../../../shared/icons/logo.png";
-
+import arrow from "../../../../shared/icons/black-arrow.png";
 import styles from "./index.module.scss";
 
 const submenuItems = [
@@ -54,8 +54,6 @@ const Header = () => {
     await i18n.changeLanguage(lang);
   };
 
-  const history = useHistory();
-
   return (
     <header className={[styles.header].join(" ")}>
       <div className={styles.mobile_menu} onClick={handleClick}>
@@ -93,6 +91,7 @@ const Header = () => {
                 >
                   {t(label)}
                 </Link>
+                {/* <IoIosArrowDown className={styles.option__arrow}/> */}
                 <Submenu />
               </li>
             ) : (
