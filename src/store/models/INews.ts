@@ -2,10 +2,10 @@ export interface INews {
   id: number;
   lang: string;
   title: string;
-  readTime: number;
   shortDescription: string;
   fullDescription: string;
   teamMemberNameDto: ITeamMemberNameDTO;
+  createDate:string;
 }
 
 interface ITeamMemberNameDTO {

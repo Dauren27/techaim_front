@@ -1,10 +1,10 @@
 @import "../../../../shared/styles/colors.scss";
-@import '../../../../shared/styles/media.scss';
-@import '../../../../shared/styles/common.scss';
+@import "../../../../shared/styles/media.scss";
+@import "../../../../shared/styles/common.scss";
 
 .feed_right {
   display: grid !important;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
   margin-top: 10px;
   column-gap: 29px;
@@ -18,7 +18,7 @@
   grid-template-rows: 1fr;
 
   &__header {
-    font-family: Montserrat,"Lato",sans-serif;
+    font-family: Montserrat, "Lato", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: vw(16);
@@ -34,12 +34,11 @@
     width: 100%;
     margin-top: vw(-20);
   }
-
 }
 
 .card {
   width: 100%;
-  font-family: Montserrat,"Lato",sans-serif;
+  font-family: Montserrat, "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: $dark_grey;
@@ -48,6 +47,15 @@
   padding: 7px;
   min-height: 200px;
 
+  &.main__card {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin-bottom: 50px;
+  }
+  &:hover {
+    transform: scale(1.01);
+  }
   h6 {
     font-weight: 600;
     font-size: 24px;
@@ -72,7 +80,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 20px;
-
   }
 }
 
@@ -89,8 +96,8 @@
 }
 
 @media (max-width: 1025px) {
-  .card{
-    .crop{
+  .card {
+    .crop {
       min-height: 235px;
     }
   }
@@ -208,34 +215,32 @@
       display: flex;
       flex-direction: column;
       margin-left: 2%;
-
     }
   }
 }
 @media (max-width: 650px) {
-  .feed_right{
+  .feed_right {
     display: flex !important;
     flex-wrap: wrap !important;
   }
-  .card{
-    .text_content{
+  .card {
+    .text_content {
       width: 450px;
     }
-    .crop{
-      width: 500px ;
+    .crop {
+      width: 500px;
     }
   }
 }
 
 @media (max-width: 426px) {
-  .card{
-    .crop{
+  .card {
+    .crop {
       min-height: 218px !important;
     }
-    .text_content{
-      margin-left: 0 ;
+    .text_content {
+      margin-left: 0;
       width: 350px !important;
     }
   }
 }
-

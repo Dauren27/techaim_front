@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import phone_icon from "../../../shared/icons/icon-phone-grey.svg";
 import mail_icon from "../../../shared/icons/icon-mail-grey.svg";
 import fb_icon from "../../../shared/icons/icon-fb-grey.svg";
-import twitter_icon from "../../../shared/icons/icon-twitter-grey.svg";
+import twitter_icon from "../../../shared/icons/x.png";
 import instagram_icon from "../../../shared/icons/icon-instagram-grey.svg";
 import linkedin_icon from "../../../shared/icons/icon-linkedin-grey.svg";
 import tiktok_icon from "../../../shared/icons/TikTok_Icon_Black.png";

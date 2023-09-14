@@ -7,33 +7,13 @@ import TeamScene from "./scenes/TeamScene";
 import ProjectsScene from "./scenes/ProjectsScene";
 import MentorsScene from "./scenes/MentorsScene";
 import ProjectScene from "./scenes/ProjectScene";
-import ProfileEditScene from "./scenes/ProfileEditScene";
-import LoginScene from "./scenes/LoginScene";
-import SignInScene from "./scenes/SignInScene";
 import JoinTeamScene from "./scenes/JoinTeamScene";
 import NewsScene from "./scenes/NewsScene";
 import MentorScene from "./scenes/MentorScene";
 import ReportsScene from "./scenes/ReportsScene";
-import AdminScene from "./scenes/AdminScene";
-import AdminProjectScene from "./scenes/AdminProjectScene";
-import AdminReportsScene from "./scenes/AdminReportsScene";
-import AdminOurTeamScene from "./scenes/AdminOurTeam";
-import AdminPartnersScene from "./scenes/AdminPartnersScene";
-import AdminSupervisorsScene from "./scenes/AdminSupervisorsScene";
 import MainPageMission from "./kit/modules/main_page/mission";
 import PartnersScene from "./scenes/PartnersScene";
 import NewsDetailsScene from "./scenes/NewsDetailsPageScene";
-import AdminMentorsScene from "./scenes/AdminMentorsScene";
-import AdminMainPageScene from "./scenes/AdminMainPage";
-import AdminEditTeam from "./kit/modules/admin_our_team/admin_edit_team";
-import AdminEditNews from "./kit/modules/admin_news/admin_edit_news";
-import AdminEditPartner from "./kit/modules/admin_partners/admin_edit_partners";
-import AdminEditSupervisor from "./kit/modules/admin_supervisors/admin_edit_supervisors";
-import AdminEditProject from "./kit/modules/admin_project/admin_edit_project";
-import AdminEditReport from "./kit/modules/admin_ reports/admin_edit_reports";
-import AdminMentorSkills from "./kit/modules/admin_mentors/admin_mentor_skills";
-import AdminEditMentor from "./kit/modules/admin_mentors/admin_edit_mentor";
-import NotFoundScene from "./scenes/NotFoundScene";
 
 export const SCENE_ITEMS_PUBLIC: SceneItem[] = [
   new SceneItem({
@@ -133,15 +113,7 @@ export const SCENE_ITEMS_PUBLIC: SceneItem[] = [
       exact: true,
     }),
   }),
-  new SceneItem({
-    sceneName: "LoginScene",
-    sceneComponent: LoginScene,
-    navigationItem: new NavItem({
-      route: "/login",
-      link: "/login",
-      exact: true,
-    }),
-  }),
+
   new SceneItem({
     sceneName: "NewsScene",
     sceneComponent: NewsScene,
@@ -175,165 +147,6 @@ export const SCENE_ITEMS_PUBLIC: SceneItem[] = [
     navigationItem: new NavItem({
       route: "/partners",
       link: "/partners",
-      exact: true,
-    }),
-  }),
-
-//   new SceneItem({
-//     sceneName: "NotFoundScene",
-//     sceneComponent: NotFoundScene,
-//     navigationItem: new NavItem({
-//       route: "*",
-//       link: "/404",
-//       exact: true,
-//     }),
-//   }),
-];
-
-export const SCENE_ITEMS: SceneItem[] = [
-  ...SCENE_ITEMS_PUBLIC,
-  new SceneItem({
-    sceneName: "AdminNews",
-    sceneComponent: AdminScene,
-    navigationItem: new NavItem({
-      route: "/admin/news",
-      link: "/admin/news",
-      exact: true,
-    }),
-  }),
-
-  new SceneItem({
-    sceneName: "AdminProject",
-    sceneComponent: AdminProjectScene,
-    navigationItem: new NavItem({
-      route: "/admin/project",
-      link: "/admin/project",
-      exact: true,
-    }),
-  }),
-  new SceneItem({
-    sceneName: "AdminReports",
-    sceneComponent: AdminReportsScene,
-    navigationItem: new NavItem({
-      route: "/admin/reports",
-      link: "/admin/reports",
-      exact: true,
-    }),
-  }),
-  new SceneItem({
-    sceneName: "AdminOurTeam",
-    sceneComponent: AdminOurTeamScene,
-    navigationItem: new NavItem({
-      route: "/admin/team",
-      link: "/admin/team",
-      exact: true,
-    }),
-  }),
-  new SceneItem({
-    sceneName: "AdminPartners",
-    sceneComponent: AdminPartnersScene,
-    navigationItem: new NavItem({
-      route: "/admin/partners",
-      link: "/admin/partners",
-      exact: true,
-    }),
-  }),
-  new SceneItem({
-    sceneName: "AdminSupervisors",
-    sceneComponent: AdminSupervisorsScene,
-    navigationItem: new NavItem({
-      route: "/admin/supervisors",
-      link: "/admin/supervisors",
-      exact: true,
-    }),
-  }),
-  new SceneItem({
-    sceneName: "AdminMentors",
-    sceneComponent: AdminMentorsScene,
-    navigationItem: new NavItem({
-      route: "/admin/mentor",
-      link: "/admin/mentor",
-      exact: true,
-    }),
-  }),
-  new SceneItem({
-    sceneName: "AdminMentorSkills",
-    sceneComponent: AdminMentorSkills,
-    navigationItem: new NavItem({
-      route: "/admin/mentor/skills",
-      link: "/admin/mentor/skills",
-      exact: true,
-    }),
-  }),
-  new SceneItem({
-    sceneName: "AdminMainPage",
-    sceneComponent: AdminMainPageScene,
-    navigationItem: new NavItem({
-      route: "/admin",
-      link: "/admin",
-      exact: true,
-    }),
-  }),
-  new SceneItem({
-    sceneName: "AdminEditTeam",
-    sceneComponent: AdminEditTeam,
-    navigationItem: new NavItem({
-      route: "/admin/edit/team/:id",
-      link: "/admin",
-      exact: true,
-    }),
-  }),
-  new SceneItem({
-    sceneName: "AdminEditNews",
-    sceneComponent: AdminEditNews,
-    navigationItem: new NavItem({
-      route: "/admin/edit/news/:id",
-      link: "/admin",
-      exact: true,
-    }),
-  }),
-  new SceneItem({
-    sceneName: "AdminEditPartner",
-    sceneComponent: AdminEditPartner,
-    navigationItem: new NavItem({
-      route: "/admin/edit/partner/:id",
-      link: "/admin",
-      exact: true,
-    }),
-  }),
-  new SceneItem({
-    sceneName: "AdminEditSupervisor",
-    sceneComponent: AdminEditSupervisor,
-    navigationItem: new NavItem({
-      route: "/admin/edit/supervisor/:id",
-      link: "/admin",
-      exact: true,
-    }),
-  }),
-  new SceneItem({
-    sceneName: "AdminEditProject",
-    sceneComponent: AdminEditProject,
-    navigationItem: new NavItem({
-      route: "/admin/edit/project/:id",
-      link: "/admin",
-      exact: true,
-    }),
-  }),
-  new SceneItem({
-    sceneName: "AdminEditReport",
-    sceneComponent: AdminEditReport,
-    navigationItem: new NavItem({
-      route: "/admin/edit/report/:id",
-      link: "/admin",
-      exact: true,
-    }),
-  }),
-  new SceneItem({
-    sceneName: "AdminEditMentor",
-    sceneComponent: AdminEditMentor,
-    navigationItem: new NavItem({
-      route: "/admin/edit/mentor/:id",
-      link: "/admin",
       exact: true,
     }),
   }),

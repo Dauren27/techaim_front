@@ -25,7 +25,7 @@
 
     .card_info_header {
       padding-top: 43.17px;
-      padding-bottom: 42px;
+      padding-bottom: 0px;
       text-align: center;
 
       h2 {
@@ -289,7 +289,7 @@
     }
     h2 {
       font-size: 28px !important;
-      line-height: 18px !important;
+      line-height: 24px !important;
     }
 
     span {
@@ -297,12 +297,13 @@
       line-height: 2.61053 !important;
       font-weight: 400 !important;
       letter-spacing: 0em !important;
+      margin-top: 10px;
     }
 
     p {
       font-size: 16px !important;
       line-height: 26px !important;
-      text-align: left !important;
+      margin-top: 20px;
     }
   }
 }
@@ -347,7 +348,6 @@
     p {
       font-size: 16px !important;
       line-height: 26px !important;
-      text-align: left !important;
     }
   }
 }

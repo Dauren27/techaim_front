@@ -111,14 +111,13 @@
 .text {
   letter-spacing: 0;
   color: #2b2a29;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 25px;
 }
 
 * {
-  font-family: 'Rubik', serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   color: #3b3a39;
   font-weight: 400;
@@ -126,46 +125,45 @@
   padding: 0;
   text-decoration: none;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
   outline: none;
 }
 
 body {
-  background: #FFFFFF;
+  background: #ffffff;
   min-height: 100vh;
 }
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 * {
-  font-family: 'Rubik', serif;
   font-size: 14px;
   font-weight: 400;
   margin: 0;
   padding: 0;
   text-decoration: none;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
   outline: none;
 }
 
 body {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 body {
-  font-family: Roboto, sans-serif;
   color: #2b2a29;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   min-height: 100%;
   margin: 0;
@@ -177,15 +175,15 @@ html, body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   min-height: 100vh;
 }
 
 main {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 footer {

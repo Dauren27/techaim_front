@@ -28,7 +28,6 @@ export default function NewsDetail() {
   }, []);
 
   const {
-    readTime,
     lang,
     title,
     shortDescription,

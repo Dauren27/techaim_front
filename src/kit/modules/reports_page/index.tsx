@@ -4,13 +4,12 @@ import Breadcrumbs from "../../components/breadcrumbs";
 import ReportsTable from "./reports_table";
 import TableSearch from "./reports_table/table_search";
 import { getReport } from "../../../api/axiosApiRequest";
-import { TGetReport } from "../admin_ reports/TCreateReports";
 import styles from "./index.module.scss";
 import { useTranslation } from "react-i18next";
 
 export default function ReportsPage() {
   const { t } = useTranslation();
-  const [reports, setData] = useState<TGetReport>();
+  const [reports, setData] = useState<any>();
   const [selectedYear, setSelectedYear] = useState("Все");
 
   useEffect(() => {
@@ -46,8 +45,12 @@ export default function ReportsPage() {
                 <div className={[styles.table_header].join(" ")}>
                   {t("report_name")}
                 </div>
-                <div className={[styles.table_header].join(" ")}>{t("report_year")}</div>
-                <div className={[styles.table_header].join(" ")}>{t("report_download")}</div>
+                <div className={[styles.table_header].join(" ")}>
+                  {t("report_year")}
+                </div>
+                <div className={[styles.table_header].join(" ")}>
+                  {t("report_download")}
+                </div>
               </div>
             </div>
           </div>

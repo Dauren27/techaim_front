@@ -1,18 +1,3 @@
-import { TGetTeam } from "../kit/modules/admin_our_team/TCreateTeammate";
-import { IGetMentor } from "../kit/modules/admin_mentors/TCreateMentors";
-import { TGetPartners } from "../kit/modules/admin_partners/TCreatePartner";
-import { IGetSupervisor } from "../kit/modules/admin_supervisors/TCreateSupervisor";
-import { TGetNews } from "../kit/modules/admin_news/TCreateNews";
-import { TGetProject } from "../kit/modules/admin_project/TCreateProject";
-import { TGetReport } from "../kit/modules/admin_ reports/TCreateReports";
-import { TGetTeamById } from "../kit/modules/admin_our_team/admin_edit_team/TEditTeam";
-import { TGetNewsById } from "../kit/modules/admin_news/admin_edit_news/TEditNews";
-import { TGetPartnerById } from "../kit/modules/admin_partners/admin_edit_partners/TEditPartners";
-import { TGetProjectById } from "../kit/modules/admin_project/admin_edit_project/TEditProject";
-import { TGetSupervisorById } from "../kit/modules/admin_supervisors/admin_edit_supervisors/TEditSupervisor";
-import { TGetReportById } from "../kit/modules/admin_ reports/admin_edit_reports/TEditReports";
-import { IGetMentorSkillIds } from "../kit/modules/admin_mentors/admin_mentor_skills/TCreateSkills";
-import { TGetMentorById } from "../kit/modules/admin_mentors/admin_edit_mentor/TEditMentor";
 import { $api } from ".";
 export type TAuth = {
   username: string;
@@ -22,7 +7,7 @@ export type TAuth = {
 export const postAuthData = async (values: {
   username: string;
   password: string;
-}) => await $api.post<TAuth>(`/api/auth/login`, values).then((response) => {});
+}) => await $api.post(`/api/auth/login`, values).then((response) => {});
 
 export const sendLogout = async () =>
   await $api.post(`/api/auth/logout`).then((response) => response.data);
@@ -39,10 +24,9 @@ export const deleteMember = async (id: number) =>
     .then((response) => response.data);
 
 export const getTeamMembers = async () =>
-  await $api.get<TGetTeam>(`/public-api/RUS/team_members`);
+  await $api.get(`/public-api/RUS/team_members`);
 export const getTeamMemberById = async (id: string) =>
-  await $api.get<TGetTeamById>(`/public-api/RUS/team_member/${id}`);
-// tslint:disable-next-line:no-shadowed-variable
+  await $api.get(`/public-api/RUS/team_member/${id}`);
 export const editTeamMember = async (id: string, payload: FormData) =>
   await $api
     .put(`/api/admin/team_member/${id}`, payload)
@@ -58,12 +42,10 @@ export const deleteMentor = async (id: number) =>
     .delete(`/api/admin/mentor/${id}`)
     .then((response) => response.data);
 
-export const getMentor = async () =>
-  await $api.get<IGetMentor>(`/public-api/RUS/mentors`);
+export const getMentor = async () => await $api.get(`/public-api/RUS/mentors`);
 
 export const getMentorById = async (id: string) =>
-  await $api.get<TGetMentorById>(`/public-api/RUS/mentor/${id}`);
-// tslint:disable-next-line:no-shadowed-variable
+  await $api.get(`/public-api/RUS/mentor/${id}`);
 export const editMentor = async (id: string, payload: FormData) =>
   await $api.put(`/public-api/mentor/${id}`, payload).then((res) => res.data);
 
@@ -76,8 +58,7 @@ export const createMentorSkills = async (payload: FormData) =>
 export const deleteMentorSkills = async (id: number) =>
   await $api.delete(`/api/admin/skill/${id}`).then((response) => response.data);
 
-export const getMentorSkills = async () =>
-  await $api.get<IGetMentorSkillIds>(`/public-api/skills`);
+export const getMentorSkills = async () => await $api.get(`/public-api/skills`);
 
 // Partner
 export const createPartner = async (payload: FormData) =>
@@ -91,10 +72,10 @@ export const deletePartner = async (id: number) =>
     .then((response) => response.data);
 
 export const getPartner = async () =>
-  await $api.get<TGetPartners>(`/public-api/RUS/partners`);
+  await $api.get(`/public-api/RUS/partners`);
 
 export const getPartnerById = async (id: string) =>
-  await $api.get<TGetPartnerById>(`/public-api/RUS/partner/${id}`);
+  await $api.get(`/public-api/RUS/partner/${id}`);
 export const editPartner = async (id: string, payload: FormData) =>
   await $api.put(`/api/admin/partner/${id}`, payload).then((res) => res.data);
 
@@ -110,10 +91,10 @@ export const deleteSupervisor = async (id: number) =>
     .then((response) => response.data);
 
 export const getSupervisors = async () =>
-  await $api.get<IGetSupervisor>(`/public-api/RUS/supervisors`);
+  await $api.get(`/public-api/RUS/supervisors`);
 
 export const getSupervisorById = async (id: string) =>
-  await $api.get<TGetSupervisorById>(`/public-api/RUS/supervisor/${id}`);
+  await $api.get(`/public-api/RUS/supervisor/${id}`);
 
 export const editSupervisor = async (id: string, payload: FormData) =>
   await $api
@@ -128,11 +109,10 @@ export const createNews = async (payload: FormData) =>
 export const deleteNews = async (id: number) =>
   await $api.delete(`/api/admin/news/${id}`).then((response) => response.data);
 
-export const getNews = async () =>
-  await $api.get<TGetNews>(`/public-api/RUS/news`);
+export const getNews = async () => await $api.get(`/public-api/RUS/news`);
 
 export const getNewsById = async (id: string) =>
-  await $api.get<TGetNewsById>(`/public-api/RUS/news/${id}`);
+  await $api.get(`/public-api/RUS/news/${id}`);
 
 export const editNews = async (id: string, payload: FormData) =>
   await $api.put(`/api/admin/news/${id}`, payload).then((res) => res.data);
@@ -150,10 +130,9 @@ export const deleteProject = async (id: number) =>
     .then((response) => response.data);
 
 export const getProject = async () =>
-  await $api.get<TGetProject>(`/public-api/RUS/projects`);
+  await $api.get(`/public-api/RUS/projects`);
 export const getProjectById = async (id: string) =>
-  await $api.get<TGetProjectById>(`/public-api/RUS/project/${id}`);
-// tslint:disable-next-line:no-shadowed-variable
+  await $api.get(`/public-api/RUS/project/${id}`);
 export const editProject = async (id: string, payload: FormData) =>
   await $api
     .put(`/api/admin/project/update/${id}`, payload)
@@ -170,11 +149,9 @@ export const deleteReport = async (id: number) =>
     .delete(`/api/admin/report/${id}`)
     .then((response) => response.data);
 
-export const getReport = async () =>
-  await $api.get<TGetReport>(`/public-api/RUS/reports`);
+export const getReport = async () => await $api.get(`/public-api/RUS/reports`);
 
 export const getReportById = async (id: string) =>
-  await $api.get<TGetReportById>(`/public-api/report/${id}/RUS/pdf`);
-// tslint:disable-next-line:no-shadowed-variable
+  await $api.get(`/public-api/report/${id}/RUS/pdf`);
 export const editReport = async (id: string, payload: FormData) =>
   await $api.put(`/api/admin/report/${id}`, payload).then((res) => res.data);

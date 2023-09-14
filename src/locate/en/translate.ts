@@ -17,7 +17,6 @@ import ServicesPage from "../../kit/modules/services_page/translate";
 import ContactPage from "../../kit/modules/contact_page/translate";
 import TeamPage from "../../kit/modules/team_page/translate";
 import PartnersPage from "../../kit/modules/partners_page/translate";
-import LoginPage from "../../kit/modules/login_page/translate";
 import StateCheck from "../../kit/components/state_check/translate";
 import MentorsPage from "../../kit/modules/mentors_page/translate";
 import ReportsPage from "../../kit/modules/reports_page/translate";
@@ -42,7 +41,6 @@ const translations = {
   ...Breadcrumbs.en,
   ...MainPageNewsFeed.en,
   ...MainPagePartners.en,
-  ...LoginPage.en,
   ...StateCheck.en,
   ...MentorsPage.en,
   ...ReportsPage.en,

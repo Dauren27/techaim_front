@@ -98,7 +98,7 @@ const CommunityPage = (props: any) => {
                         {t("our_community_mentors_info5")}
                     </li>
                 </ul>
-                <a className={styles.button} href={`https://docs.google.com/forms/d/1Ho2GWbf6VZmzlQozS__rxFwx9t8MZNVlGu7PON56kLs/viewform?edit_requested=true`} target="_blank">
+                <a className={styles.button} href={`https://docs.google.com/forms/d/1Ho2GWbf6VZmzlQozS__rxFwx9t8MZNVlGu7PON56kLs/viewform?edit_requested=true`}>
                     <ButtonComponent color="yellow">
                         {t('our_community_mentors_button_title')}
                     </ButtonComponent>

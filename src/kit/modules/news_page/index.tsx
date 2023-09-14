@@ -27,8 +27,8 @@ export default function NewsPage() {
   return (
     <section className={styles.sections}>
       <Breadcrumbs page_title={t("news_title")} page_url="/news" />
-      <SectionHeader title={t("news_title")} />
-      <div className={[styles.search_bar].join(" ")}>
+      <SectionHeader title={t("news_title")} underline />
+      {/* <div className={[styles.search_bar].join(" ")}>
         <div className={[styles.custom_select_wrapper].join(" ")}>
           <div
             className={[styles.custom_select, isOpen ? styles.open : ""].join(
@@ -79,12 +79,12 @@ export default function NewsPage() {
         >
           <line y1="2" x2="1513" y2="2" stroke="#FFA726" strokeWidth="5" />
         </svg>
-      </div>
+      </div> */}
       <div className={styles.container}>
         <>
           {news && news.length > 0 && (
             <div>
-              <NewsFeed news={news} />
+              {/* <NewsFeed news={news} /> */}
               <NewsPopular news={news} />
             </div>
           )}

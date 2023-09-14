@@ -48,12 +48,12 @@ export default function TeamPage() {
                 email={el.email}
               />
             ))}
-          <StateCheck
-            error={error && error?.message}
-            pending={pending}
-            data={team_members}
-          />
         </div>
+        <StateCheck
+          error={error && error?.message}
+          pending={pending}
+          data={team_members}
+        />
       </section>
       <section className={[styles.info_section].join("")}>
         <h2 className={[styles.info_section_title].join("")}>
@@ -92,16 +92,17 @@ export default function TeamPage() {
       <section className={[styles.supervisors_section].join("")}>
         <SectionHeader title={t("team_title1")} />
         <div className={[styles.supervisors_cards].join("")}>
-          {supervisors && supervisors.map((el: any) => (
-            <SupervisorCard
-              id={el.id}
-              key={el.id}
-              firstName={el.firstName}
-              lastName={el.lastName}
-              company={el.company}
-              bio={el.bio}
-            />
-          ))}
+          {supervisors &&
+            supervisors.map((el: any) => (
+              <SupervisorCard
+                id={el.id}
+                key={el.id}
+                firstName={el.firstName}
+                lastName={el.lastName}
+                company={el.company}
+                bio={el.bio}
+              />
+            ))}
           <StateCheck
             error={error && error?.message}
             pending={pending}

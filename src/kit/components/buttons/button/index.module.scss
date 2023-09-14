@@ -1,8 +1,8 @@
-@import '../../../../shared/styles/colors';
-@import '../../../../shared/styles/media';
+@import "../../../../shared/styles/colors";
+@import "../../../../shared/styles/media";
 
 .button {
-  font-family: 'Montserrat','Lato',sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   padding: 12.66px 29.02px 13.81px 30.05px;
@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   &.yellow {
     color: white;
     background: $orange;
@@ -77,5 +77,4 @@
     line-height: 12px;
     padding: 10px 20px;
   }
- 
 }

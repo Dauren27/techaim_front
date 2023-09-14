@@ -1,11 +1,11 @@
-export default{  
-    "en":{
-        'popular_title':"Popular"
-    },
-    "ru":{
-        "popular_title":"Популярное"
-    },
-    "kyr":{
-        "popular_title":"Популярдуу"
-    }
-}
+export default {
+  en: {
+    popular_title: "All News",
+  },
+  ru: {
+    popular_title: "Все новости",
+  },
+  kyr: {
+    popular_title: "Бардык жаңылыктар",
+  },
+};

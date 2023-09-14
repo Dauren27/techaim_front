@@ -1,5 +1,5 @@
-@import '../../../../shared/styles/colors.scss';
-@import '../../../../shared/styles/media.scss';
+@import "../../../../shared/styles/colors.scss";
+@import "../../../../shared/styles/media.scss";
 
 .card {
   width: 100%;
@@ -23,31 +23,32 @@
     margin: 0 auto;
     margin-top: -40%;
     width: 90%;
-    padding: 48px 39.67px;
+    padding: 48px 29.67px;
     margin-bottom: 2vw;
     background: #ffffff;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     .card_title {
       min-height: 44px;
-      margin-bottom: 68.31px;
-      font-family: Lato,"Montserrat",sans-serif;
+      margin-bottom: 48.31px;
+      font-family: Lato, "Montserrat", sans-serif;
       font-style: normal;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 25px;
       line-height: 22px;
       text-align: center;
       color: #101010;
     }
     .card_description {
-      font-family: Montserrat,"Lato",sans-serif;
+      font-family: Montserrat, "Lato", sans-serif;
       font-style: normal;
       font-weight: normal;
-      font-size: 12px;
+      font-size: 15px;
+      font-weight: 500;
       line-height: 150%;
       text-align: center;
       color: #101010;
-      margin-bottom: 50.25px;
+      margin-bottom: 40.25px;
       overflow: hidden;
       height: 110px;
     }
@@ -55,16 +56,15 @@
       background: none;
       border: none;
       margin: 0 auto;
-     
-        font-family: Lato,"Montserrat",sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 150%;
-        text-align: center;
-        text-transform: uppercase;
-        color: $primary;
-      
+
+      font-family: Lato, "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 150%;
+      text-align: center;
+      text-transform: uppercase;
+      color: $primary;
     }
   }
 
@@ -74,44 +74,41 @@
       width: 360px;
     }
     .card_content {
-      padding: 30px 20px;
+      padding: 30px 60px;
       .card_title {
         margin-bottom: 30px;
       }
       .card_description {
         margin-bottom: 50px;
-      
       }
     }
-
   }
-    
+
   @media (max-width: 768px) {
-    
-      .card_img {
-        height: 360px;
-      }
-      .card_content {
-        padding: 30px 50px;
-        width: 80%;
-      }
-    
+    .card_img {
+      height: 360px;
+    }
+    .card_content {
+      padding: 30px 20px;
+      width: 90%;
+    }
   }
   @media (max-width: $layout-mobile) {
     .card_img {
       height: 270px;
-      width: 300px 
+      width: 300px;
     }
     .card_content {
       width: 90%;
       padding: 30px 20px;
       .card_title {
         margin-bottom: 15px;
+        font-size: 18px;
       }
       .card_description {
         font-size: 13px;
         margin-bottom: 0;
-     height: auto;
+        height: auto;
       }
     }
   }

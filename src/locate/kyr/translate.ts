@@ -18,7 +18,6 @@ import ServicesPage from "../../kit/modules/services_page/translate";
 import JoinTeamPage from "../../kit/modules/join_team_page/translate";
 import MainPagePartners from "../../kit/modules/main_page/partners/translate";
 import PartnersPage from "../../kit/modules/partners_page/translate";
-import LoginPage from "../../kit/modules/login_page/translate";
 import StateCheck from "../../kit/components/state_check/translate";
 import MentorsPage from "../../kit/modules/mentors_page/translate";
 import ReportsPage from "../../kit/modules/reports_page/translate";
@@ -44,11 +43,9 @@ const translations = {
   ...ContactPage.kyr,
   ...Breadcrumbs.kyr,
   ...Our_Team.kyr,
-  ...LoginPage.kyr,
   ...StateCheck.kyr,
   ...MentorsPage.kyr,
   ...ReportsPage.kyr,
-
 };
 
 export default { translations };

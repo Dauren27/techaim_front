@@ -23,7 +23,7 @@ export const AuthContext = createContext<AuthContextType>({
 export const AuthProvider: FC = ({children}) => {
     const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
     useEffect(() => {
-        if (localStorage.getItem('auth')) {
+        if (sessionStorage.getItem('auth')) {
             setIsUserLoggedIn(true)
         }
     }, [])

@@ -6,15 +6,12 @@ import App from "./App";
 import i18n from "./i18n";
 import "./index.css";
 import store from "./store/store";
-import { AuthProvider } from "./context/authContext";
 
 ReactDOM.render(
   <I18nextProvider i18n={i18n}>
-    <AuthProvider>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </AuthProvider>
+    <Provider store={store}>
+      <App />
+    </Provider>
   </I18nextProvider>,
   document.getElementById("root")
 );

@@ -1,12 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import translation from "./translate";
-import { Button, FormControl, Select } from "@material-ui/core";
+import { FormControl, Select } from "@material-ui/core";
 import { ReactComponent as CloseMenu } from "../../../../shared/icons/x.svg";
 import { ReactComponent as MenuIcon } from "../../../../shared/icons/menu.svg";
-import AuthContext from "../../../../context/authContext";
-import { useLogoutMutation } from "../../../../store/queryReducers/authApi";
 
 import logo from "../../../../shared/icons/logo.png";
 
@@ -48,14 +46,6 @@ const Header = () => {
   const closeMobileMenu = () => setClick(false);
   const { pathname } = useLocation();
   const { t, i18n } = useTranslation();
-  const { isUserLoggedIn, setIsUserLoggedIn } = useContext(AuthContext);
-  const [logout, {}] = useLogoutMutation();
-  const handleLogOut = () => {
-    logout();
-    setIsUserLoggedIn(false);
-    localStorage.removeItem("auth");
-    history.push("/");
-  };
 
   const handleLanguageChange = async (
     event: React.ChangeEvent<{ name?: string; value: unknown }>
@@ -65,10 +55,6 @@ const Header = () => {
   };
 
   const history = useHistory();
-  const redirect = () => {
-    history.push("/login");
-    closeMobileMenu();
-  };
 
   return (
     <header className={[styles.header].join(" ")}>
@@ -152,7 +138,7 @@ const Header = () => {
             </FormControl>
           </li>
           <li>
-            {isUserLoggedIn ? (
+            {/* {isUserLoggedIn ? (
               <Button
                 onClick={handleLogOut}
                 variant="contained"
@@ -168,7 +154,7 @@ const Header = () => {
               >
                 {t("Login")}
               </Button>
-            )}
+            )} */}
           </li>
         </ul>
       </div>
